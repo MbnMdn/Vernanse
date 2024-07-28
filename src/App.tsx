@@ -9,6 +9,7 @@ import NewProject from './pages/NewProject';
 import PageNotFound from './pages/PageNotFound';
 import Projects from './pages/Projects';
 import SingleService from './pages/SingleService';
+import Breadcrumbs from "./components/Breadcrumbs";
 
 export default function App() {
   return (

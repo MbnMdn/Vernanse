@@ -3,7 +3,7 @@ import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 
 import StyleCard from './Home/StyleCard';
 
-export default function ScrollableCards() {
+export default function ScrollableCards({ children }: { children: React.ReactNode }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -28,12 +28,11 @@ export default function ScrollableCards() {
         className="scrollbar-hide flex space-x-4 overflow-x-auto "
         style={{ scrollBehavior: 'smooth' }}
       >
-        <StyleCard />
-        <StyleCard />
-        <StyleCard />
-        <StyleCard />
-        <StyleCard />
-        <StyleCard />
+        {children}
+        {children}
+        {children}
+        {children}
+        {children}
       </div>
       <button onClick={scrollRight} className="absolute -right-10 z-10 rounded-full p-2">
         <HiOutlineChevronRight size={24} />

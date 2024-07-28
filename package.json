@@ -11,6 +11,7 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@ant-design/pro-components": "^2.7.14",
     "antd": "^5.19.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -1,10 +1,10 @@
 import ScrollableCards from '../ScrollableCards';
-import StyleCard from "./StyleCard";
+import StyleCard from "../Home/StyleCard";
 
-export default function NewStylesSection() {
+export default function SelectStyleSection() {
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="text-3xl font-medium text-darkGreen">New Styles</h2>
+      <h2 className="text-xl font-medium text-darkGreen">Select Style</h2>
       <ScrollableCards>
         <StyleCard />
       </ScrollableCards>
