@@ -11,11 +11,10 @@ import Projects from './pages/Projects';
 import SingleService from './pages/SingleService';
 
 export default function App() {
-  // return <h1 className="text-3xl font-bold text-red-500 underline">Hello world!</h1>;
   return (
     <>
       <BrowserRouter>
-        <div>
+        <div className="bg-mainGreen">
           <Routes>
             <Route path="/" element={<LayoutsWithNavbar />}>
               <Route path="/" element={<Home />} />
