@@ -1,5 +1,5 @@
-import Breadcrumbs from "../components/Breadcrumbs";
+import FinancialSection from '../components/Financial/FinancialSection';
 
 export default function Financial() {
-  return <div>Financial</div>;
+  return <FinancialSection />;
 }

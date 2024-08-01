@@ -12,6 +12,7 @@ import ProjectsFilledIcon from '../assets/icons/ProjectsIcon/ProjectsFilledIcon'
 import ProjectsIcon from '../assets/icons/ProjectsIcon/ProjectsIcon';
 import SingleServiceFilledIcon from '../assets/icons/SingleServiceIcon/SingleServiceFilledIcon';
 import SingleServiceIcon from '../assets/icons/SingleServiceIcon/SingleServiceIcon';
+import tailwindColors from '../../tailwindColors';
 
 export default function NavLinks() {
   const activeColor = '#323232';
@@ -110,7 +111,7 @@ export default function NavLinks() {
           >
             <span className="flex">
               <FinancialIcon />
-              <FinancialFilledIcon />
+              <FinancialFilledIcon color={tailwindColors.secondary} />
               Financial
             </span>
           </NavLink>

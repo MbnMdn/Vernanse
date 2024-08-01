@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
+import Breadcrumbs from './Breadcrumbs';
 import NavBar from './NavBar';
-import Breadcrumbs from "./Breadcrumbs";
 
 export default function LayoutsWithNavbar() {
   return (
@@ -9,9 +9,11 @@ export default function LayoutsWithNavbar() {
       <div className="w-full flex-none md:mt-5 md:w-60">
         <NavBar />
       </div>
-      <div className=" m-3 flex-grow overflow-y-auto rounded-xl bg-neutral-200 md:p-10">
+      <div className=" m-4 flex-grow overflow-y-auto rounded-3xl bg-neutral-100 md:p-10">
         <Breadcrumbs />
-        <Outlet />
+        <div className="my-3">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

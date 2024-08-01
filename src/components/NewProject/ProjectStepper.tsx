@@ -1,4 +1,4 @@
-import { Button, Steps, Upload } from 'antd';
+import { Button, Steps } from 'antd';
 import React, { useState } from 'react';
 
 import SelectDesignerStep from './SelectDesignerStep';
@@ -40,12 +40,12 @@ const ProjectStepper: React.FC = () => {
 
   return (
     <div className="p-4">
-      <Steps current={current} onChange={setCurrent}>
+      <Steps current={current} onChange={setCurrent} className="text-tertiary">
         {steps.map((step, index) => (
           <Step key={index} title={step.title} />
         ))}
       </Steps>
-      <div className="mt-8 ">{steps[current].content}</div>
+      <div className="mt-8">{steps[current].content}</div>
       <div className="mt-8 flex justify-between">
         {current > 0 && (
           <Button onClick={() => setCurrent(current - 1)} className="mr-2">

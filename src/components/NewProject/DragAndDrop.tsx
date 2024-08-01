@@ -1,8 +1,9 @@
-import React from 'react';
-import { InboxOutlined, PictureOutlined } from '@ant-design/icons';
-import type { UploadProps } from 'antd';
+import { PictureOutlined } from '@ant-design/icons';
+import { ConfigProvider, UploadProps } from 'antd';
 import { message, Upload } from 'antd';
-import { FaImages } from "react-icons/fa6";
+import React from 'react';
+
+import tailwindColors from '../../../tailwindColors';
 
 const { Dragger } = Upload;
 
@@ -26,19 +27,22 @@ const props: UploadProps = {
   },
 };
 
-
-export default function DragAndDrop(){
-  return(
-    <Dragger {...props}>
-      <p className="ant-upload-drag-icon">
-        {/*<InboxOutlined />*/}
-        <PictureOutlined />
-      </p>
-      <p className="ant-upload-text">Click or drag file to this area to upload</p>
-      <p className="ant-upload-hint">
-        Maximum size: 50MB
-      </p>
-    </Dragger>
-
+export default function DragAndDrop() {
+  return (
+    <ConfigProvider
+      theme={{
+        token: {
+          colorBorder: tailwindColors.secondary,
+        },
+      }}
+    >
+      <Dragger {...props}>
+        <p className="ant-upload-drag-icon">
+          <PictureOutlined />
+        </p>
+        <p className="ant-upload-text">Click or drag file to this area to upload</p>
+        <p className="ant-upload-hint">Maximum size: 50MB</p>
+      </Dragger>
+    </ConfigProvider>
   );
 }

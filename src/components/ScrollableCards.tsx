@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
 
-import StyleCard from './Home/StyleCard';
+import tailwindColors from '../../tailwindColors';
 
 export default function ScrollableCards({ children }: { children: React.ReactNode }) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -21,7 +21,7 @@ export default function ScrollableCards({ children }: { children: React.ReactNod
   return (
     <div className="scrollbar-hide relative flex items-center">
       <button onClick={scrollLeft} className="absolute -left-10 z-10 rounded-full p-2">
-        <HiOutlineChevronLeft size={24} />
+        <HiOutlineChevronLeft color={tailwindColors.secondary} size={24} />
       </button>
       <div
         ref={scrollRef}
@@ -35,7 +35,7 @@ export default function ScrollableCards({ children }: { children: React.ReactNod
         {children}
       </div>
       <button onClick={scrollRight} className="absolute -right-10 z-10 rounded-full p-2">
-        <HiOutlineChevronRight size={24} />
+        <HiOutlineChevronRight color={tailwindColors.secondary} size={24} />
       </button>
     </div>
   );

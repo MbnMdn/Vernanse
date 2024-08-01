@@ -1,4 +1,4 @@
-import DesignerCard from './DesignerCard';
+import DesignerCard from '../DesignerCard';
 
 export default function DesignersSection() {
   return (
