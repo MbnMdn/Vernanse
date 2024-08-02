@@ -15,6 +15,7 @@ import PageNotFound from './pages/PageNotFound';
 import PayOutPreferences from './pages/PayOutPreferences';
 import Produce from './pages/Produce';
 import Projects from './pages/Projects';
+import SingleService from "./pages/SingleService";
 
 export default function App() {
   return (
@@ -28,13 +29,14 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contract" element={<Contract />} />
               <Route path="/financial" element={<Financial />} />
+              <Route path="/single-service" element={<SingleService />} />
               <Route path="/single-service/measure" element={<Measure />} />
               <Route path="/single-service/design" element={<Design />} />
               <Route path="/single-service/install" element={<Install />} />
               <Route path="/single-service/produce" element={<Produce />} />
               <Route path="/account" element={<Account />} />
-              <Route path="/halp-and-support" element={<HelpAndSupport />} />
-              <Route path="/payout-prefrences" element={<PayOutPreferences />} />
+              <Route path="/help-and-support" element={<HelpAndSupport />} />
+              {/*<Route path="/payout-prefrences" element={<PayOutPreferences />} />*/}
             </Route>
             <Route path="auth" element={<Auth />} />
             <Route path="*" element={<PageNotFound />} />

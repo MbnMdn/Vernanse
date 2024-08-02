@@ -27,16 +27,15 @@ export default function NewTicketForm() {
       validateMessages={validateMessages}
     >
       <div className="flex flex-col items-start">
-        <div className="flex">
+        <div className="flex gap-7">
           <Form.Item name={['project']} rules={[{ required: true }]}>
-            <Input placeholder="Project Name" />
+            <Input placeholder="Project Name" className="w-44 lg:w-60"/>
           </Form.Item>
           <Form.Item
-            name={['email']}
-            // label="Email"
-            rules={[{ type: 'email', required: true }]}
+            name={['subject']}
+            rules={[{ required: true }]}
           >
-            <Input placeholder="Email" />
+            <Input placeholder="Subject" className="w-44 md:w-56 lg:w-60"/>
           </Form.Item>
         </div>
 
@@ -48,7 +47,7 @@ export default function NewTicketForm() {
         >
           <Input.TextArea
             style={{ height: 100 }}
-            className=" max-w-full"
+            className=" w-128"
             placeholder="Type Description"
           />
         </Form.Item>

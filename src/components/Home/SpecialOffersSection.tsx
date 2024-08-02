@@ -1,4 +1,6 @@
+import ScrollableCards from '../ScrollableCards';
 import OfferCard from './OfferCard';
+import StyleCard from './StyleCard';
 
 export default function SpecialOffersSection() {
   return (

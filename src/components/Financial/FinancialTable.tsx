@@ -1,73 +1,70 @@
+import React from 'react';
+
+import Table from '../Table';
 export default function FinancialTable() {
-  return (
-    <table className="border-tools-table-outline  w-full border-separate rounded-lg border  text-left">
-      <thead>
-        <tr className="bg-mainGreen text-center text-tertiary">
-          <th className="rounded-tl-lg p-3">Invoice Number</th>
-          <th className="p-3">Date</th>
-          <th className="p-3">Project</th>
-          <th className="p-3">Provider</th>
-          <th className="p-3">Amount</th>
-          <th className="p-3">Paid</th>
-          <th className="p-3">Left Amount</th>
-          <th className="p-3">Dead Line</th>
-          <th className="p-3">Commission</th>
-          <th className="rounded-tr-lg p-3">Detail</th>
-        </tr>
-      </thead>
-      <tbody className="rounded-b-lg">
-        <tr>
-          <td className="p-3">#212533</td>
-          <td className="p-3"> 21/12/2024</td>
-          <td className="p-3">Dan</td>
-          <td className="p-3">Jordan</td>
-          <td className="p-3">1200 $</td>
-          <td className="p-3">+1200 $</td>
-          <td className="p-3">0 $</td>
-          <td className="p-3">21/12/2024</td>
-          <td className="p-3">125 $</td>
-          <td className="p-3">open</td>
-        </tr>
+  const columns = [
+    { header: 'Invoice Number', accessor: 'invoiceNumber' },
+    { header: 'Date', accessor: 'date' },
+    { header: 'Project', accessor: 'project' },
+    { header: 'Provider', accessor: 'provider' },
+    { header: 'Amount', accessor: 'amount' },
+    { header: 'Paid', accessor: 'paid' },
+    { header: 'Left Amount', accessor: 'leftAmount' },
+    { header: 'Dead Line', accessor: 'deadLine' },
+    { header: 'Commission', accessor: 'commission' },
+    { header: 'Detail', accessor: 'detail' },
+  ];
 
-        <tr className="bg-neutral-200">
-          <td className="p-3">#212533</td>
-          <td className="p-3"> 21/12/2024</td>
-          <td className="p-3">name 2</td>
-          <td className="p-3">AB</td>
-          <td className="p-3">800 $</td>
-          <td className="p-3">0 $</td>
-          <td className="p-3">800 $</td>
-          <td className="p-3">21/12/2024</td>
-          <td className="p-3">200 $</td>
-          <td className="p-3">open</td>
-        </tr>
+  const data = [
+    {
+      invoiceNumber: '#212533',
+      date: '21/12/2024',
+      project: 'Dan',
+      provider: 'Jordan',
+      amount: '1200 $',
+      paid: '+1200 $',
+      leftAmount: '0 $',
+      deadLine: '21/12/2024',
+      commission: '125 $',
+      detail: 'open',
+    },
+    {
+      invoiceNumber: '#212533',
+      date: '21/12/2024',
+      project: 'name 2',
+      provider: 'AB',
+      amount: '800 $',
+      paid: '0 $',
+      leftAmount: '800 $',
+      deadLine: '21/12/2024',
+      commission: '200 $',
+      detail: 'open',
+    },
+    {
+      invoiceNumber: '#212533',
+      date: '21/12/2024',
+      project: 'name 3',
+      provider: 'Monda',
+      amount: '250 $',
+      paid: '-250 $',
+      leftAmount: '0 $',
+      deadLine: '21/12/2024',
+      commission: '50 $',
+      detail: 'open',
+    },
+    {
+      invoiceNumber: '#212533',
+      date: '21/12/2024',
+      project: 'name 4',
+      provider: 'AM',
+      amount: '1200 $',
+      paid: '+200 $',
+      leftAmount: '1000 $',
+      deadLine: '21/12/2024',
+      commission: '80 $',
+      detail: 'open',
+    },
+  ];
 
-        <tr>
-          <td className="p-3">#212533</td>
-          <td className="p-3"> 21/12/2024</td>
-          <td className="p-3">name 3</td>
-          <td className="p-3">Monda</td>
-          <td className="p-3">250 $</td>
-          <td className="p-3">-250 $</td>
-          <td className="p-3">0 $</td>
-          <td className="p-3">21/12/2024</td>
-          <td className="p-3">50 $</td>
-          <td className="p-3">open</td>
-        </tr>
-
-        <tr className="bg-neutral-200">
-          <td className="rounded-bl-lg p-3 ">#212533</td>
-          <td className="p-3"> 21/12/2024</td>
-          <td className="p-3">name 4</td>
-          <td className="p-3">AM</td>
-          <td className="p-3">1200 $</td>
-          <td className="p-3">+200 $</td>
-          <td className="p-3">1000 $</td>
-          <td className="p-3">21/12/2024</td>
-          <td className="p-3">80 $</td>
-          <td className="rounded-br-lg p-3">open</td>
-        </tr>
-      </tbody>
-    </table>
-  );
+  return <Table columns={columns} data={data} />;
 }

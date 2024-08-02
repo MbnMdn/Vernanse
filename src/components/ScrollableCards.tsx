@@ -28,6 +28,12 @@ export default function ScrollableCards({ children }: { children: React.ReactNod
         className="scrollbar-hide flex space-x-4 overflow-x-auto "
         style={{ scrollBehavior: 'smooth' }}
       >
+
+        {children}
+        {children}
+        {children}
+        {children}
+        {children}
         {children}
         {children}
         {children}

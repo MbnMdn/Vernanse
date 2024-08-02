@@ -4,12 +4,14 @@ import pic1 from '../../assets/bath.jpg';
 
 export default function OfferCard() {
   return (
-    <div className="group relative w-1/2  overflow-hidden rounded-lg shadow-lg">
+    <div className="group relative w-96 md:w-128 overflow-hidden  rounded-lg bg-secondary shadow-lg">
       <img src={pic1} alt="Interior Design" className="h-full w-full object-cover" />
       <div className="absolute inset-0  bg-mainGreen opacity-40 transition-opacity duration-300 group-hover:opacity-60"></div>
       <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-white">
-        <h2 className="text-4xl font-semibold">New material, for unique houses</h2>
-        <p className="mt-2">
+        <h2 className="text-3xl font-semibold md:text-4xl">
+          New material, for unique houses
+        </h2>
+        <p className="mt-2 text-sm  md:text-base">
           We proud to introduce new material with high quality for new design styles and
           different decoration.
         </p>

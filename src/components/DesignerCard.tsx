@@ -3,7 +3,7 @@ import profilePic from '../assets/profilePic.jpeg';
 
 export default function DesignerCard() {
   return (
-    <main className="mx-2  p-3">
+    <main className="mx-2 p-3">
       <div
         className=" relative w-full overflow-hidden rounded-xl shadow-sm shadow-tertiary hover:shadow-md
        hover:shadow-tertiary"
