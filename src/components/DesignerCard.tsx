@@ -22,9 +22,8 @@ export default function DesignerCard() {
             <div className=" text-xl font-bold ">Jordan Lin</div>
           </div>
 
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, nulla totam
-            laboriosam earum veritatis
+          <p className="text-sm text-neutral-600">
+            Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title
           </p>
         </div>
       </div>

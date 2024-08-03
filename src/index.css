@@ -71,3 +71,11 @@
         opacity: 0.1;
     }
 }
+
+/*.ant-tabs-nav{*/
+/*    border-bottom: 1px solid #f0f0f0 !important;*/
+/*}*/
+
+.ant-tabs-top > .ant-tabs-nav::before { /* For the line to the right and close to the tabs */
+    border-color: transparent;
+}

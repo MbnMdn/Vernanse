@@ -1,10 +1,9 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import Breadcrumbs from './Breadcrumbs';
-import NavBar from './NavBar';
-import NewNav from "./nav/NewNav";
-import { useState } from "react";
-import MenuBarMobile from "./nav/MenuBarMobile";
+import MenuBarMobile from './SideBar/MenuBarMobile';
+import NewNav from './SideBar/SideBar';
 
 export default function LayoutsWithNavbar() {
   // Mobile sidebar visibility state
@@ -12,10 +11,8 @@ export default function LayoutsWithNavbar() {
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:mt-5 md:w-60">
-        {/*<TailNav />*/}
-        {/*<NewNav />*/}
         <MenuBarMobile setter={setShowSidebar} />
-        <NewNav show={showSidebar} setter={setShowSidebar} />
+        <NewNav show={showSidebar} setter={setShowSidebar} showSidebar={showSidebar} />
       </div>
       <div className=" m-4 flex-grow overflow-y-auto rounded-3xl bg-neutral-100 p-10">
         <Breadcrumbs />

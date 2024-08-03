@@ -1,8 +1,5 @@
-import { SettingOutlined } from '@ant-design/icons';
-import React, { useEffect, useState } from 'react';
-import { IoIosArrowDown, IoIosClose, IoIosMenu } from 'react-icons/io';
-import { IoIosArrowUp } from 'react-icons/io';
-import { NavLink, useLocation } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import tailwindColors from '../../../tailwindColors';
 import ContractFilledIcon from '../../assets/icons/ContractIcon/ContractFilledIcon';
@@ -10,16 +7,14 @@ import FinancialFilledIcon from '../../assets/icons/Financial/FinancialFilledIco
 import HelpFilledIcon from '../../assets/icons/HelpIcon/HelpFilledIcon';
 import HomeFilledIcon from '../../assets/icons/HomeIcon/HomeFilledIcon';
 import NewProjectFilledIcon from '../../assets/icons/NewProjectIcon/NewProjectFilledIcon';
-import PayOutFilledIcon from '../../assets/icons/PayOutIcon/PayOutFilledIcon';
 import ProjectsFilledIcon from '../../assets/icons/ProjectsIcon/ProjectsFilledIcon';
-import SettingsFilledIcon from '../../assets/icons/SettingsIcon/SettingsFilledIcon';
 import SingleServiceFilledIcon from '../../assets/icons/SingleServiceIcon/SingleServiceFilledIcon';
 import UserFilledIcon from '../../assets/icons/UserIcon/UserFilledIcon';
 import Logo from '../../assets/Logo';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-export default function Sidebar({ show, setter }) {
+export default function Sidebar({ show, setter, showSidebar }) {
   const className =
     'w-[250px] bg-mainGreen transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40';
   const appendClass = show ? ' ml-0' : ' ml-[-250px] md:ml-0';
@@ -32,14 +27,20 @@ export default function Sidebar({ show, setter }) {
           to="/"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary' + ''
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <HomeFilledIcon color={tailwindColors.mainGreen} />
-            <span>Home</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <HomeFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Home</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
@@ -50,14 +51,20 @@ export default function Sidebar({ show, setter }) {
           to="/new-project"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <NewProjectFilledIcon color={tailwindColors.mainGreen} />
-            <span>New Project</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <NewProjectFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>New Project</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
@@ -69,14 +76,20 @@ export default function Sidebar({ show, setter }) {
           to="/single-service/"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <SingleServiceFilledIcon color={tailwindColors.mainGreen} />
-            <span>Single Service</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <SingleServiceFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Single Service</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
@@ -87,14 +100,20 @@ export default function Sidebar({ show, setter }) {
           to="/projects"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <ProjectsFilledIcon color={tailwindColors.mainGreen} />
-            <span>Projects</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <ProjectsFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Projects</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
@@ -105,14 +124,20 @@ export default function Sidebar({ show, setter }) {
           to="/contract"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <ContractFilledIcon color={tailwindColors.mainGreen} />
-            <span>Contract</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <ContractFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Contract</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
@@ -123,34 +148,26 @@ export default function Sidebar({ show, setter }) {
           to="/financial"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <FinancialFilledIcon color={tailwindColors.mainGreen} />
-            <span>Financial</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <FinancialFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Financial</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
     {
-      key: '10',
+      key: '7',
       label: (
-        // <NavLink
-        //   to="/account"
-        //   className={({ isActive }) =>
-        //     `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
-        //       isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
-        //     }`
-        //   }
-        // >
-        //   <div className="flex items-center gap-1">
-        //     {/*if the link is active pass true, otherwise pass false*/}
-        //     <UserFilledIcon active={} />
-        //     <span>Account</span>
-        //   </div>
-        // </NavLink>
         <NavLink
           to="/account"
           className={({ isActive }) =>
@@ -161,7 +178,11 @@ export default function Sidebar({ show, setter }) {
         >
           {({ isActive }) => (
             <div className="flex items-center gap-1">
-              <UserFilledIcon active={isActive} />
+              <UserFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
               <span>Account</span>
             </div>
           )}
@@ -169,31 +190,37 @@ export default function Sidebar({ show, setter }) {
       ),
     },
     {
-      key: '11',
+      key: '8',
       label: (
         <NavLink
           to="/help-and-support"
           className={({ isActive }) =>
             `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary' : 'bg-tertiary'
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
             }`
           }
         >
-          <div className="flex items-center gap-1">
-            <HelpFilledIcon color={tailwindColors.mainGreen} />
-            <span>Help And Support</span>
-          </div>
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <HelpFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Help And Support</span>
+            </div>
+          )}
         </NavLink>
       ),
     },
   ];
 
   const ModalOverlay = () => (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
     <div
       className="fixed bottom-0 left-0 right-0 top-0 z-30 flex bg-black/50 md:hidden"
       onClick={() => {
-        setter((oldVal: any) => !oldVal);
+        setter((oldVal: boolean) => !oldVal);
       }}
     />
   );
@@ -202,6 +229,7 @@ export default function Sidebar({ show, setter }) {
     <>
       <div className={`${className}${appendClass}`}>
         <div className="my-3 flex flex-col items-center">
+          {/*{showSidebar ? <div></div> : <Logo />}*/}
           <Logo />
         </div>
         <div className="flex flex-col">

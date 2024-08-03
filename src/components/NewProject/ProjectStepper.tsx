@@ -1,5 +1,6 @@
 import { Button, Steps } from 'antd';
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import SelectDesignerStep from './SelectDesignerStep';
 import SelectStyleStep from './SelectStyleStep';
@@ -9,6 +10,8 @@ import UploadKitchenPhotoStep from './UploadKitchenPhotoStep';
 const { Step } = Steps;
 
 const ProjectStepper: React.FC = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1200px)' });
+
   const [current, setCurrent] = useState(0);
 
   const steps = [
@@ -40,7 +43,13 @@ const ProjectStepper: React.FC = () => {
 
   return (
     <div className="p-4">
-      <Steps current={current} onChange={setCurrent} className="text-tertiary">
+      <Steps
+        direction={isTabletOrMobile ? 'vertical' : 'horizontal'}
+        // direction={'vertical'}
+        current={current}
+        onChange={setCurrent}
+        className="flex-row text-tertiary"
+      >
         {steps.map((step, index) => (
           <Step key={index} title={step.title} />
         ))}

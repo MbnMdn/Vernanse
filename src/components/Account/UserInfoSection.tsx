@@ -1,5 +1,5 @@
 import { UploadOutlined } from '@ant-design/icons';
-import { Button, Form, Image, Input, InputNumber, Upload } from "antd";
+import { Button, Form, Image, Input, InputNumber, Upload } from 'antd';
 import React from 'react';
 import { FaRegCircleUser } from 'react-icons/fa6';
 import { GrLocation, GrPhone } from 'react-icons/gr';
@@ -8,11 +8,10 @@ import { MdAlternateEmail } from 'react-icons/md';
 
 import man from '../../assets/man.jpeg';
 
-
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
+// const layout = {
+//   labelcol: { span: 8 },
+//   wrapperCol: { span: 16 },
+// };
 
 const validateMessages = {
   required: '${label} is required!',
@@ -25,19 +24,14 @@ const onFinish = (values: any) => {
   console.log(values);
 };
 
-
 export default function UserInfoSection({ user }: { user: any }) {
   return (
-    <form
-      {...layout}
-      name="nest-messages"
-      className="w-full"
-    >
+    <form name="nest-messages" className="w-full">
       <div className="flex flex-col items-center gap-5 align-middle text-neutral-700">
         <div>
           <Image width={150} src={man} className="rounded-full" />
         </div>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-10 md:gap-y-2">
+        <div className="grid grid-cols-1 gap-5 md:gap-x-10 md:gap-y-2 lg:grid-cols-2">
           <div className="flex flex-col gap-2">
             <p>Full Name</p>
             <Input
