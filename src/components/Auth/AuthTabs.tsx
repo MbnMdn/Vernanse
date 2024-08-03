@@ -21,15 +21,12 @@ export default function AuthTabs() {
   ];
 
   return (
-    <div className="flex h-full flex-col justify-center rounded-2xl ">
+    <div className=" flex h-full flex-col justify-center rounded-2xl border-4 border-mainGreen border-double md:border-none">
       <ConfigProvider
         theme={{
           components: {
             Tabs: {
-              // itemColor: tailwindColors.tertiary,
-              // itemSelectedColor: tailwindColors.ternaryDarker,
               colorBgContainer: tailwindColors.tertiary,
-              /* here is your component tokens */
             },
           },
         }}

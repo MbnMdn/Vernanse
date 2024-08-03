@@ -15,10 +15,11 @@ export default function App() {
         // style={{
         //   '--swiper-navigation-size': '20px',
         // }}
-        spaceBetween={30}
+        speed={2000}
+        spaceBetween={5}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{

@@ -9,7 +9,7 @@ const layout = {
 const validateMessages = {
   required: '${label} is required!',
   types: {
-    email: '${label} is not a valid email!',
+    email: 'Please enter a valid email!',
   },
 };
 
@@ -29,15 +29,15 @@ export default function SignInForm() {
       >
         <div className="flex flex-col items-center">
           <div className="flex flex-col">
-            <Form.Item name={['username']} rules={[{ required: true }]}>
-              <Input placeholder="Username" className="w-72 md:w-72 lg:w-80" />
+            <Form.Item name={['email']} rules={[{ required: true, type: 'email' }]}>
+              <Input size={"large"}  placeholder="Email" className="w-72 md:w-72 lg:w-80" />
             </Form.Item>
             <Form.Item name={['password']} rules={[{ required: true }]}>
-              <Input placeholder="Password" className="w-72 md:w-72 lg:w-80" />
+              <Input.Password size={"large"} placeholder="Password" className="w-72 md:w-72 lg:w-80" />
             </Form.Item>
           </div>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
-            <Button className="w-72 md:w-72 lg:w-80" type="primary" htmlType="submit">
+            <Button size={"large"} className="w-72 md:w-72 lg:w-80" type="primary" htmlType="submit">
               Sign In
             </Button>
           </Form.Item>
@@ -49,6 +49,7 @@ export default function SignInForm() {
         <hr className="flex-grow border-t border-gray-300" />
       </div>
       <Button
+        size={"large"}
         className="w-72 bg-white text-neutral-800 md:w-72 lg:w-80"
         htmlType="submit"
       >
