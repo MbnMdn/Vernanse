@@ -22,7 +22,7 @@ export default function SignInForm() {
   const [inputValue, setInputValue] = useState('');
 
   return (
-    <div className="flex w-full flex-col items-center">
+    <div className="flex w-full flex-col items-center mt-4">
       <Form
         {...layout}
         name="nest-messages"
@@ -56,13 +56,14 @@ export default function SignInForm() {
             />
             <Form.Item name={['repeatPass']} rules={[{ required: true }]}>
               <Input.Password
+                size={"large"}
                 placeholder="Repeat Password"
                 className="mt-3 w-72 md:w-72 lg:w-80"
               />
             </Form.Item>
           </div>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
-            <Button className="w-72 md:w-72 lg:w-80" type="primary" htmlType="submit">
+            <Button size={"large"} className="w-72 md:w-72 lg:w-80" type="primary" htmlType="submit">
               Sign Up
             </Button>
           </Form.Item>

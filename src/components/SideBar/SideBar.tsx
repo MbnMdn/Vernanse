@@ -11,6 +11,7 @@ import ProjectsFilledIcon from '../../assets/icons/ProjectsIcon/ProjectsFilledIc
 import SingleServiceFilledIcon from '../../assets/icons/SingleServiceIcon/SingleServiceFilledIcon';
 import UserFilledIcon from '../../assets/icons/UserIcon/UserFilledIcon';
 import Logo from '../../assets/Logo';
+import LogOutIcon from "../../assets/icons/LogOutIcon/LogOutIcon";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
@@ -208,6 +209,30 @@ export default function Sidebar({ show, setter, showSidebar }) {
                 notActiveColor={tailwindColors.mainGreen}
               />
               <span>Help And Support</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '9',
+      label: (
+        <NavLink
+          to="/auth"
+          className={({ isActive }) =>
+            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <LogOutIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Log Out</span>
             </div>
           )}
         </NavLink>

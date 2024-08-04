@@ -36,7 +36,7 @@ export default function App() {
               <Route path="/single-service/produce" element={<Produce />} />
               <Route path="/account" element={<Account />} />
               <Route path="/help-and-support" element={<HelpAndSupport />} />
-              {/*<Route path="/payout-prefrences" element={<PayOutPreferences />} />*/}
+              <Route path="/payout-prefrences" element={<PayOutPreferences />} />
             </Route>
             <Route path="auth" element={<Auth />} />
             <Route path="*" element={<PageNotFound />} />
