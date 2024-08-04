@@ -1,5 +1,5 @@
 import ScrollableCards from '../ScrollableCards';
-import StyleCard from "../Home/StyleCard";
+import StyleCard from "../Home/Customer/StyleCard";
 
 export default function SelectStyleSection() {
   return (

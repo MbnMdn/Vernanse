@@ -1,4 +1,4 @@
-import ScrollableCards from '../ScrollableCards';
+import ScrollableCards from '../../ScrollableCards';
 import StyleCard from './StyleCard';
 
 export default function NewStylesSection() {

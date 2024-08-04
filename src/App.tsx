@@ -15,25 +15,38 @@ import PageNotFound from './pages/PageNotFound';
 import PayOutPreferences from './pages/PayOutPreferences';
 import Produce from './pages/Produce';
 import Projects from './pages/Projects';
-import SingleService from "./pages/SingleService";
+import SingleService from './pages/SingleService';
+import Requests from "./pages/Requests";
 
 export default function App() {
+  const roles = {
+    customer : 'customer',
+    designer : 'designer',
+    producer: 'producer',
+    installer: 'installer',
+    admin: 'admin'
+  };
+
+  const user_role = roles.designer;
+
   return (
     <>
       <BrowserRouter>
         <div className="bg-mainGreen">
           <Routes>
-            <Route path="/" element={<LayoutsWithNavbar />}>
-              <Route path="/" element={<Home />} />
+            <Route path="/" element={<LayoutsWithNavbar user_role={user_role} />}>
+              <Route path="/" element={<Home user_role={user_role} />} />
               <Route path="/new-project" element={<NewProject />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contract" element={<Contract />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/single-service" element={<SingleService />} />
+              <Route path="/financial" element={<Financial user_role={user_role} />} />
+              <Route path="/single-service" element={<SingleService user_role={user_role}/>} />
               <Route path="/single-service/measure" element={<Measure />} />
               <Route path="/single-service/design" element={<Design />} />
               <Route path="/single-service/install" element={<Install />} />
               <Route path="/single-service/produce" element={<Produce />} />
+              <Route path="/requests" element={<Requests />} />
+
               <Route path="/account" element={<Account />} />
               <Route path="/help-and-support" element={<HelpAndSupport />} />
               <Route path="/payout-prefrences" element={<PayOutPreferences />} />

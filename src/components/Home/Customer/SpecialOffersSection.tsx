@@ -1,4 +1,4 @@
-import ScrollableCards from '../ScrollableCards';
+import ScrollableCards from '../../ScrollableCards';
 import OfferCard from './OfferCard';
 import StyleCard from './StyleCard';
 

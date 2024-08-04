@@ -27,7 +27,7 @@ export default function NewTicketForm() {
       validateMessages={validateMessages}
     >
       <div className="flex flex-col items-start">
-        <div className="flex gap-7">
+        <div className="flex flex-col md:flex-row gap-1 md:gap-7">
           <Form.Item name={['project']} rules={[{ required: true }]}>
             <Input placeholder="Project Name" className="w-44 lg:w-60"/>
           </Form.Item>

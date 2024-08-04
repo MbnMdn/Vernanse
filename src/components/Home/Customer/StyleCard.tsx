@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pic1 from '../../assets/bath.jpg';
+import pic1 from '../../../assets/bath.jpg';
 
 export default function StyleCard() {
   return (

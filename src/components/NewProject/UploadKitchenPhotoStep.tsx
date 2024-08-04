@@ -1,4 +1,4 @@
-import StyleCard from '../Home/StyleCard';
+import StyleCard from '../Home/Customer/StyleCard';
 import Picture from '../Picture';
 import ScrollableCards from '../ScrollableCards';
 import DragAndDrop from './DragAndDrop';

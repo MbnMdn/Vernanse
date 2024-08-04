@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Table from '../Table';
-export default function FinancialTable() {
+import Table from '../../Table';
+export default function CustomerFinancialTable() {
   const columns = [
     { header: 'Invoice Number', accessor: 'invoiceNumber' },
     { header: 'Date', accessor: 'date' },

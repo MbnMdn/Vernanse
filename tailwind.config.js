@@ -12,6 +12,7 @@ export default {
         tertiaryLight: '#ece4e3',
         ternaryDarker: '#5f5350',
         text: '#E5E7EB',
+        lightGrey: '#808080'
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

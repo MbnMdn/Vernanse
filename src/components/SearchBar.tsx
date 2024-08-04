@@ -6,10 +6,10 @@ const { Search } = Input;
 const onSearch: SearchProps['onSearch'] = (value, _e, info) =>
   console.log(info?.source, value);
 
-export default function SearchBar() {
+export default function SearchBar({placeholder} : {placeholder: string}) {
   return (
     <Search
-      placeholder="input search text"
+      placeholder={placeholder}
       allowClear
       enterButton="Search"
       size="large"
