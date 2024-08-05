@@ -1,7 +1,7 @@
 import StyleCard from '../Home/Customer/StyleCard';
 import Picture from '../Picture';
 import ScrollableCards from '../ScrollableCards';
-import DragAndDrop from './DragAndDrop';
+import DragAndDrop from '../DragAndDrop';
 
 export default function UploadKitchenPhotoStep() {
   return (

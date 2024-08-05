@@ -7,6 +7,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { MdAlternateEmail } from 'react-icons/md';
 
 import man from '../../assets/man.jpeg';
+import OpenChangePasswordModalButton from './OpenChangePasswordModalButton';
 
 const validateMessages = {
   required: '${label} is required!',
@@ -85,7 +86,7 @@ export default function UserInfoSection({ user }: { user: any }) {
 
           <div className="flex flex-col gap-2">
             <p>Need to Change your Password?</p>
-            <Button className="w-72">Edit</Button>
+            <OpenChangePasswordModalButton />
           </div>
 
           <div className="flex flex-col gap-2">

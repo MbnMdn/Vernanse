@@ -1,11 +1,13 @@
 import { Empty, Typography } from 'antd';
 
-import DragAndDrop from './DragAndDrop';
+import DragAndDrop from '../DragAndDrop';
 
 export default function AddFavoriteStyleSection() {
   return (
     <div className="flex flex-col gap-3">
-      <span className="text-neutral-600">Didn’t find your favorite style? Add your favorite. </span>
+      <span className="text-neutral-600">
+        Didn’t find your favorite style? Add your favorite.{' '}
+      </span>
       <div className="flex items-start gap-10">
         <DragAndDrop />
         <Empty

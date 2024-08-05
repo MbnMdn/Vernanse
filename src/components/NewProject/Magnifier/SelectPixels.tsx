@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import manImage from '../../../assets/man.jpeg'; // Make sure to import your image
 
 interface Point {
@@ -110,7 +111,7 @@ const ImageComponent: React.FC = () => {
       {points.map((point, index) => (
         <div
           key={index}
-          className="circle absolute w-2 h-2 bg-red-500 rounded-full pointer-events-none"
+          className="circle pointer-events-none absolute h-2 w-2 rounded-full bg-red-500"
           style={{ left: point.x - 4 + 'px', top: point.y - 4 + 'px' }}
         ></div>
       ))}
@@ -118,7 +119,7 @@ const ImageComponent: React.FC = () => {
       <div
         ref={glassRef}
         id="magnifier"
-        className={`absolute border border-gray-300 rounded-full cursor-none pointer-events-none ${
+        className={`pointer-events-none absolute cursor-none rounded-full border border-gray-300 ${
           magnifierVisible ? 'block' : 'hidden'
         }`}
         style={{
@@ -126,7 +127,9 @@ const ImageComponent: React.FC = () => {
           height: '100px',
           backgroundImage: `url(${manImage})`,
           backgroundRepeat: 'no-repeat',
-          backgroundSize: `${imgRef.current?.width! * zoom}px ${imgRef.current?.height! * zoom}px`,
+          backgroundSize: `${imgRef.current?.width! * zoom}px ${
+            imgRef.current?.height! * zoom
+          }px`,
           backgroundPosition: `${magnifierBgPosition.x}px ${magnifierBgPosition.y}px`,
         }}
       ></div>
@@ -147,7 +150,7 @@ const ImageComponent: React.FC = () => {
       <button
         type="button"
         onClick={clearPoints}
-        className="mt-2 p-2 bg-blue-500 text-white rounded"
+        className="mt-2 rounded bg-blue-500 p-2 text-white"
       >
         Clear
       </button>
@@ -156,7 +159,7 @@ const ImageComponent: React.FC = () => {
       <button
         type="button"
         onClick={getWidthAndHeight}
-        className="mt-2 p-2 bg-green-500 text-white rounded"
+        className="mt-2 rounded bg-green-500 p-2 text-white"
       >
         Get height and width
       </button>

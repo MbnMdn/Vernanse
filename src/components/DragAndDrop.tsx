@@ -3,7 +3,7 @@ import { ConfigProvider, UploadProps } from 'antd';
 import { message, Upload } from 'antd';
 import React from 'react';
 
-import tailwindColors from '../../../tailwindColors';
+import tailwindColors from '../../tailwindColors';
 
 const { Dragger } = Upload;
 

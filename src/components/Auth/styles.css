@@ -3,7 +3,6 @@
     font-size: 18px;
     background: #fff;
 
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,36 +20,8 @@
     background-color: #334746 !important;
 }
 
-
-
-.swiper-button-prev {
-    /*color: #334746 !important;*/
-    /*background-image: url(/assets/icons/arrow-circle-left.svg) !important;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: 100% auto;*/
-    /*background-position: center;*/
-}
-
-.swiper-button-next {
-    /*background-image: url(/assets/icons/arrow-circle-right.svg) !important;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: 100% auto;*/
-    /*background-position: center;*/
-}
-
-.swiper-button-next::after {
-    /*display: none;*/
-}
-
-.swiper-button-prev::after {
-    /*display: none;*/
-}
-
-
 .swiper-button-next,
 .swiper-button-prev {
-    /*background-color: white;*/
-    /*background-color: rgba(255, 255, 255, 0.5);*/
     right:10px;
     padding: 30px;
     color: #334746 !important;

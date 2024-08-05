@@ -1,9 +1,9 @@
-import DragAndDrop from "./DragAndDrop";
-import SelectStyleSection from "./SelectStyleSection";
-import AddFavoriteStyleSection from "./AddFavoriteStyleSection";
+import DragAndDrop from '../DragAndDrop';
+import AddFavoriteStyleSection from './AddFavoriteStyleSection';
+import SelectStyleSection from './SelectStyleSection';
 
 export default function SelectStyleStep() {
-  return(
+  return (
     <div className="flex flex-col gap-10">
       <SelectStyleSection />
       <AddFavoriteStyleSection />

@@ -19,6 +19,7 @@ import Produce from './pages/Produce';
 import Projects from './pages/Projects';
 import Requests from './pages/Requests';
 import SingleService from './pages/SingleService';
+import Portfolio from "./pages/Portfolio";
 
 export default function App() {
   const roles = {
@@ -29,7 +30,7 @@ export default function App() {
     admin: 'admin',
   };
 
-  const user_role = roles.customer;
+  const user_role = roles.designer;
 
   return (
     <>
@@ -53,6 +54,7 @@ export default function App() {
                 <Route path="/single-service/install" element={<Install />} />
                 <Route path="/single-service/produce" element={<Produce />} />
                 <Route path="/requests" element={<Requests />} />
+                <Route path="/portfolio" element={<Portfolio />} />
 
                 <Route path="/account" element={<Account />} />
                 <Route path="/help-and-support" element={<HelpAndSupport />} />

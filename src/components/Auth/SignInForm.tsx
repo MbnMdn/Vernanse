@@ -19,7 +19,7 @@ const onFinish = (values: never) => {
 
 export default function SignInForm() {
   return (
-    <div className="flex w-full flex-col items-center mt-4">
+    <div className="mt-4 flex w-full flex-col items-center">
       <Form
         {...layout}
         name="nest-messages"
@@ -30,14 +30,27 @@ export default function SignInForm() {
         <div className="flex flex-col items-center">
           <div className="flex flex-col">
             <Form.Item name={['email']} rules={[{ required: true, type: 'email' }]}>
-              <Input size={"large"}  placeholder="Email" className="w-72 md:w-72 lg:w-80" />
+              <Input
+                size={'large'}
+                placeholder="Email"
+                className="w-72 md:w-72 lg:w-80"
+              />
             </Form.Item>
             <Form.Item name={['password']} rules={[{ required: true }]}>
-              <Input.Password size={"large"} placeholder="Password" className="w-72 md:w-72 lg:w-80" />
+              <Input.Password
+                size={'large'}
+                placeholder="Password"
+                className="w-72 md:w-72 lg:w-80"
+              />
             </Form.Item>
           </div>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
-            <Button size={"large"} className="w-72 md:w-72 lg:w-80" type="primary" htmlType="submit">
+            <Button
+              size={'large'}
+              className="w-72 md:w-72 lg:w-80"
+              type="primary"
+              htmlType="submit"
+            >
               Sign In
             </Button>
           </Form.Item>
@@ -49,7 +62,7 @@ export default function SignInForm() {
         <hr className="flex-grow border-t border-gray-300" />
       </div>
       <Button
-        size={"large"}
+        size={'large'}
         className="w-72 bg-white text-neutral-800 md:w-72 lg:w-80"
         htmlType="submit"
       >

@@ -1,7 +1,7 @@
 import { ColumnWidthOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import { Input, Tooltip } from 'antd';
 
-import DragAndDrop from './DragAndDrop';
+import DragAndDrop from '../DragAndDrop';
 
 export default function UploadIndexStep() {
   return (

@@ -20,13 +20,8 @@ export default function Requests() {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-3 md:flex-row md:gap-6">
-        <DatePicker
-          onChange={onChange}
-          placeholder="Deadline"
-          className="w-60"
-          size={'large'}
-        />
-        <Radio.Group value={filterValue} onChange={filterValueChange} size={'large'}>
+        <DatePicker onChange={onChange} placeholder="Deadline" className="w-60" />
+        <Radio.Group value={filterValue} onChange={filterValueChange}>
           <Radio.Button value="all">All</Radio.Button>
           <Radio.Button value="pending">Pending</Radio.Button>
           <Radio.Button value="accepted">Accepted</Radio.Button>

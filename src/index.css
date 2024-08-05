@@ -88,3 +88,18 @@
 .ant-col-16{
     max-width: 100% !important;
 }
+
+
+
+
+/* For the modal which is a child of .auth-modal */
+.profile-modal .ant-modal-content {
+    height: 300px;
+    overflow-y: auto;
+}
+
+/* For the modal which is a child of .details-modal */
+.details-modal .ant-modal-content {
+    height: 480px;
+    overflow-y: auto;
+}
