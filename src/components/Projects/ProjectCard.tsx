@@ -1,6 +1,7 @@
 import { Button, Tooltip } from 'antd';
 import React from 'react';
 import { LuInfo } from 'react-icons/lu';
+import { Link } from 'react-router-dom';
 
 import tailwindColors from '../../../tailwindColors';
 import Progressbar from './Progressbar';
@@ -23,7 +24,9 @@ export default function ProjectCard() {
 
       <Progressbar percent={40} />
 
-      <Button type="primary">Open</Button>
+      <Link to={'/projects/2'}>
+        <Button type="primary">Open</Button>
+      </Link>
     </div>
   );
 }

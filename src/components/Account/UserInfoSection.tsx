@@ -1,5 +1,5 @@
 import { UploadOutlined } from '@ant-design/icons';
-import { Button, Form, Image, Input, InputNumber, Upload } from 'antd';
+import { Button, Image, Input, InputNumber, Upload } from 'antd';
 import React from 'react';
 import { FaRegCircleUser } from 'react-icons/fa6';
 import { GrLocation, GrPhone } from 'react-icons/gr';
@@ -7,11 +7,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { MdAlternateEmail } from 'react-icons/md';
 
 import man from '../../assets/man.jpeg';
-
-// const layout = {
-//   labelcol: { span: 8 },
-//   wrapperCol: { span: 16 },
-// };
 
 const validateMessages = {
   required: '${label} is required!',
@@ -97,7 +92,7 @@ export default function UserInfoSection({ user }: { user: any }) {
             <br />
             <Button type="primary" className="w-72">
               Submit Changes
-            </Button>{' '}
+            </Button>
           </div>
         </div>
       </div>

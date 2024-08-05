@@ -2,7 +2,7 @@ import type { DatePickerProps, RadioChangeEvent } from 'antd';
 import { Button } from 'antd';
 import { DatePicker, Space } from 'antd';
 import { Radio } from 'antd';
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 import RequestsTable from '../components/Requests/RequestsTable';
 
@@ -19,14 +19,14 @@ export default function Requests() {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="flex flex-col md:flex-row gap-3 md:gap-6">
+      <div className="flex flex-col gap-3 md:flex-row md:gap-6">
         <DatePicker
           onChange={onChange}
           placeholder="Deadline"
           className="w-60"
           size={'large'}
         />
-        <Radio.Group value={filterValue} onChange={filterValueChange} size={"large"}>
+        <Radio.Group value={filterValue} onChange={filterValueChange} size={'large'}>
           <Radio.Button value="all">All</Radio.Button>
           <Radio.Button value="pending">Pending</Radio.Button>
           <Radio.Button value="accepted">Accepted</Radio.Button>

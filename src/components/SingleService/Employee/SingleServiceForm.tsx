@@ -5,9 +5,9 @@ import { Button, Checkbox, Form, Input } from 'antd';
 import { message, Upload } from 'antd';
 import { DatePicker, Space } from 'antd';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import SelectSingleService from './SelectSingleService';
-import { Link } from "react-router-dom";
 const layout = {
   labelCol: { span: 8 },
   wrapperCol: { span: 16 },
@@ -114,8 +114,9 @@ export default function SingleServiceForm({ user_role }: { user_role: string }) 
           >
             <Checkbox>
               By send this request I will sign the contract.
-              <Link to={'/contract-details'}><span className="text-xs text-secondary">Read Contract</span></Link>
-
+              <Link to={'/contract-details'}>
+                <span className="text-xs text-secondary">Read Contract</span>
+              </Link>
             </Checkbox>
           </Form.Item>
         </div>
