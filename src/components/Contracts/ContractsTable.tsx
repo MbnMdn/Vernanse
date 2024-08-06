@@ -1,5 +1,6 @@
 import React from 'react';
-import Table from "../Table";
+
+import Table from '../Table';
 
 export default function ContractTable() {
   const columns = [
@@ -22,7 +23,7 @@ export default function ContractTable() {
       phoneNumber: '+1325456789',
       type: 'Producer',
       signDate: '02/11/2024',
-      deadLine: '21/12/2024'
+      deadLine: '21/12/2024',
     },
     {
       projectName: 'Jim Green',
@@ -32,7 +33,7 @@ export default function ContractTable() {
       phoneNumber: '+1325456789',
       type: 'Designer',
       signDate: '-',
-      deadLine: '21/12/2024'
+      deadLine: '21/12/2024',
     },
     {
       projectName: 'Joe Black',
@@ -42,7 +43,7 @@ export default function ContractTable() {
       phoneNumber: '+1325456789',
       type: 'Installer',
       signDate: '-',
-      deadLine: '21/12/2024'
+      deadLine: '21/12/2024',
     },
     {
       projectName: 'Edward King',
@@ -52,19 +53,9 @@ export default function ContractTable() {
       phoneNumber: '+1325456789',
       type: 'Producer',
       signDate: '02/11/2024',
-      deadLine: '21/12/2024'
-    }
+      deadLine: '21/12/2024',
+    },
   ];
 
   return <Table columns={columns} data={data} />;
 }
-
-
-
-
-
-
-
-
-
-

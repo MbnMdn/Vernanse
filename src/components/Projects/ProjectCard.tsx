@@ -9,8 +9,8 @@ import Progressbar from './Progressbar';
 export default function ProjectCard() {
   return (
     <div
-      className="flex w-64 flex-col items-center  gap-4  rounded-xl bg-neutral-50 p-10 shadow-sm
-       shadow-tertiary hover:shadow-md hover:shadow-tertiary"
+      className="flex w-64 min-w-[250px] flex-col items-center  gap-4 rounded-xl border-2
+       border-mainGreen bg-neutral-50 p-10 hover:shadow-sm hover:shadow-mainGreen"
     >
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-1">

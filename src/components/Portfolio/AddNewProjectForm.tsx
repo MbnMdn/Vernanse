@@ -30,26 +30,13 @@ export default function AddNewProjectForm() {
     >
       <div className="flex flex-col items-start">
         <div className="flex flex-col gap-1 md:flex-row md:gap-7">
-          <Form.Item name={['Project Name']} rules={[{ required: true }]}>
-            <Input placeholder="Project Name" className="w-44 lg:w-60" />
+          <Form.Item name={['Project Capacity']} rules={[{ required: true }]}>
+            <Input placeholder="Project Capacity" className="w-44 lg:w-60" />
           </Form.Item>
-          <Form.Item name={['Style']} rules={[{ required: true }]}>
-            <Input placeholder="Style" className="w-44 md:w-56 lg:w-60" />
+          <Form.Item name={['Phone Number']} rules={[{ required: true }]}>
+            <Input placeholder="Phone Number" className="w-44 md:w-56 lg:w-60" />
           </Form.Item>
         </div>
-
-        {/*<Form.Item*/}
-        {/*  name={['description']}*/}
-        {/*  className="w-full"*/}
-        {/*  // label="Description"*/}
-        {/*  rules={[{ required: true }]}*/}
-        {/*>*/}
-        {/*  <Input.TextArea*/}
-        {/*    style={{ height: 100 }}*/}
-        {/*    className=" w-128"*/}
-        {/*    placeholder="Type Description"*/}
-        {/*  />*/}
-        {/*</Form.Item>*/}
 
         <Form.Item
           name={['Description']}

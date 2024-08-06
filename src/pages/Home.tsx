@@ -7,15 +7,17 @@ import RecentProjectsSection from '../components/Home/Employee/RecentProjectsSec
 
 export default function Home({ user_role }: { user_role: string }) {
   return (
-    <div className="flex flex-col gap-5">
-      {user_role === 'customer' && (
+    <div className="flex flex-col gap-10">
+      {user_role == 'customer' && (
         <>
           <SpecialOffersSection />
           <NewStylesSection />
         </>
       )}
 
-      {user_role === 'designer' && (
+      {(user_role === 'designer' ||
+        user_role === 'producer' ||
+        user_role === 'installer') && (
         <>
           <OverviewSection />
           <RecentProjectsSection />

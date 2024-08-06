@@ -5,7 +5,9 @@ export default function SingleService({ user_role }: { user_role: string }) {
   return (
     <>
       {user_role === 'customer' && <CustomerSingleService />}
-      {user_role === 'designer' && <EmployeeSingleService  user_role={user_role}/>}
+      {(user_role === 'designer' ||
+        user_role === 'producer' ||
+        user_role === 'installer') && <EmployeeSingleService user_role={user_role} />}
     </>
   );
 }

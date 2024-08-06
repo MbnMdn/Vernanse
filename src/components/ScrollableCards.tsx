@@ -25,20 +25,19 @@ export default function ScrollableCards({ children }: { children: React.ReactNod
       </button>
       <div
         ref={scrollRef}
-        className="scrollbar-hide flex space-x-4 overflow-x-auto "
+        className="scrollbar-hide flex overflow-x-auto "
         style={{ scrollBehavior: 'smooth' }}
       >
-
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
-        {children}
+        <div className="my-1 mr-2">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
+        <div className="mx-2 my-1">{children}</div>
       </div>
       <button onClick={scrollRight} className="absolute -right-10 z-10 rounded-full p-2">
         <HiOutlineChevronRight color={tailwindColors.secondary} size={24} />

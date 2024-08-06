@@ -1,13 +1,15 @@
-import ScrollableCards from "../../ScrollableCards";
-import ProjectCard from "../../Projects/ProjectCard";
+import ProjectCard from '../../Projects/ProjectCard';
+import ScrollableCards from '../../ScrollableCards';
 
 export default function RecentProjectsSection() {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       <h2 className="text-3xl font-medium text-darkGreen">Recent Projects</h2>
-      <ScrollableCards>
-        <ProjectCard />
-      </ScrollableCards>
+      <div className="">
+        <ScrollableCards>
+          <ProjectCard />
+        </ScrollableCards>
+      </div>
     </div>
   );
 }

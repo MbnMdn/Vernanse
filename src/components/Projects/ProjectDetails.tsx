@@ -13,23 +13,6 @@ export default function ProjectDetails() {
   return (
     <div className="flex flex-col gap-16">
       <div className="flex flex-col gap-5">
-        <div className="flex flex-col gap-2 lg:flex-row lg:gap-10">
-          <div className="flex gap-2">
-            <span className="font-medium">Design Cost:</span>
-            <span className="text-lightGrey">350$</span>
-          </div>
-
-          <div className="flex gap-2">
-            <span className="font-medium">Produce Cost Estimate:</span>
-            <span className="text-lightGrey">350$</span>
-          </div>
-
-          <div className="flex gap-2">
-            <span className="font-medium">Status:</span>
-            <span className="text-lightGrey">Design completed / Select producer</span>
-          </div>
-        </div>
-
         <div className="flex flex-col gap-5 md:gap-3">
           <div className="flex flex-col items-start justify-between gap-3 lg:flex-row lg:items-center">
             <p className="text-2xl font-semibold text-darkGreen">Designs</p>
@@ -37,6 +20,22 @@ export default function ProjectDetails() {
               <Button type={'dashed'}>Room Size File</Button>
               <Button>Reject Design</Button>
               <Button type="primary">Accept Design</Button>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 lg:flex-row lg:gap-10">
+            <div className="flex gap-2">
+              <span className="font-medium">Design Cost:</span>
+              <span className="text-lightGrey">350$</span>
+            </div>
+
+            <div className="flex gap-2">
+              <span className="font-medium">Produce Cost Estimate:</span>
+              <span className="text-lightGrey">350$</span>
+            </div>
+
+            <div className="flex gap-2">
+              <span className="font-medium">Status:</span>
+              <span className="text-lightGrey">Design completed / Select producer</span>
             </div>
           </div>
           <ScrollableCards>

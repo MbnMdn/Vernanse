@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LayoutsWithNavbar from './components/LayoutsWithNavbar';
 import ProjectDetails from './components/Projects/ProjectDetails';
+import About from './pages/About';
 import Account from './pages/Account';
 import Auth from './pages/Auth';
 import Contract from './pages/Contract';
@@ -15,11 +16,11 @@ import Measure from './pages/Measure';
 import NewProject from './pages/NewProject';
 import PageNotFound from './pages/PageNotFound';
 import PayOutPreferences from './pages/PayOutPreferences';
+import Portfolio from './pages/Portfolio';
 import Produce from './pages/Produce';
 import Projects from './pages/Projects';
 import Requests from './pages/Requests';
 import SingleService from './pages/SingleService';
-import Portfolio from "./pages/Portfolio";
 
 export default function App() {
   const roles = {
@@ -30,7 +31,7 @@ export default function App() {
     admin: 'admin',
   };
 
-  const user_role = roles.designer;
+  const user_role = roles.customer;
 
   return (
     <>
@@ -55,6 +56,7 @@ export default function App() {
                 <Route path="/single-service/produce" element={<Produce />} />
                 <Route path="/requests" element={<Requests />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/about" element={<About />} />
 
                 <Route path="/account" element={<Account />} />
                 <Route path="/help-and-support" element={<HelpAndSupport />} />
