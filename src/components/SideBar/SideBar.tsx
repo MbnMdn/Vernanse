@@ -728,6 +728,274 @@ export default function Sidebar({ show, setter, showSidebar, user_role }) {
       ),
     },
   ];
+
+  const AdminNavLinks = [
+    {
+      key: '1',
+      label: (
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <HomeFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Home</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <NavLink
+          to="/user-management/"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <HomeFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>User Management</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '4',
+      label: (
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <RequestFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Projects</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '5',
+      label: (
+        <NavLink
+          to="/customer-service"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <AboutFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Customer Service</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '6',
+      label: (
+        <NavLink
+          to="/offers"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center rounded-lg p-3 ${
+              isActive ? 'bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <ContractFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Offers</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '7',
+      label: (
+        <NavLink
+          to="/design-styles"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center rounded-lg p-3 ${
+              isActive ? 'bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <HomeFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Design Styles</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '8',
+      label: (
+        <NavLink
+          to="/contract"
+          className={({ isActive }) =>
+            `mx-3 my-1.5 flex items-center rounded-lg p-3 ${
+              isActive ? 'bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <ContractFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Contract</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '9',
+      label: (
+        <NavLink
+          to="/financial"
+          className={({ isActive }) =>
+            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <FinancialFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Financial</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '10',
+      label: (
+        <NavLink
+          to="/payment"
+          className={({ isActive }) =>
+            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <FinancialFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Payment</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '11',
+      label: (
+        <NavLink
+          to="/price-and-material"
+          className={({ isActive }) =>
+            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <FinancialFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>Price And Material</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+    {
+      key: '12',
+      label: (
+        <NavLink
+          to="/general-settings"
+          className={({ isActive }) =>
+            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
+              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <div className="flex items-center gap-1">
+              <FinancialFilledIcon
+                isActive={isActive}
+                activeColor={tailwindColors.tertiary}
+                notActiveColor={tailwindColors.mainGreen}
+              />
+              <span>General Settings</span>
+            </div>
+          )}
+        </NavLink>
+      ),
+    },
+  ];
+
   const ModalOverlay = () => (
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
     <div
@@ -750,7 +1018,9 @@ export default function Sidebar({ show, setter, showSidebar, user_role }) {
       ? DesignerAndInstallerNavLinks
       : user_role === 'producer'
       ? ProducerNavLinks
-      : CustomerNavLinks;
+      : user_role === 'customer'
+      ? CustomerNavLinks
+      : AdminNavLinks;
 
   return (
     <>

@@ -2,9 +2,10 @@ import { DatePicker, type DatePickerProps, Radio } from 'antd';
 import React from 'react';
 
 import SearchBar from '../SearchBar';
-import ContractTable from './ContractsTable';
+import CustomerContractsTable from './CustomerContractsTable';
+import EmployeeContractTable from './EmployeeContractTable';
 
-export default function ContractsSection() {
+export default function ContractsSection({ user_role }: { user_role: string }) {
   const onChange: DatePickerProps['onChange'] = (date, dateString) => {
     console.log(date, dateString);
   };
@@ -34,7 +35,11 @@ export default function ContractsSection() {
             <SearchBar placeholder={'Search'} />
           </div>
         </div>
-        <ContractTable />
+        {user_role === 'customer' ? (
+          <CustomerContractsTable />
+        ) : (
+          <EmployeeContractTable />
+        )}
       </div>
     </div>
   );

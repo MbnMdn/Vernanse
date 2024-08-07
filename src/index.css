@@ -103,3 +103,16 @@
     height: 480px;
     overflow-y: auto;
 }
+
+
+/* For the modal which is a child of .auth-modal */
+.edit-project-details-modal .ant-modal-content {
+    height: 350px;
+    overflow-y: auto;
+}
+
+
+.img-disable-pointer-events{
+    pointer-events: none;
+    user-select: none;
+}

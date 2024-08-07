@@ -2,11 +2,11 @@ import { Button } from 'antd';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import Picture from '../Picture';
-import ScrollableCards from '../ScrollableCards';
-import SelectProducerAndInstallerSection from './SelectProducerAndInstallerSection';
+import Picture from '../../../Picture';
+import ScrollableCards from '../../../ScrollableCards';
+import SelectProducerAndInstallerSection from '../../SelectProducerAndInstallerSection';
 
-export default function ProjectDetails() {
+export default function CustomerProjectDetails() {
   const { id } = useParams();
   // <div>Project {id}</div>
 
@@ -43,7 +43,6 @@ export default function ProjectDetails() {
           </ScrollableCards>
         </div>
       </div>
-
       <SelectProducerAndInstallerSection />
     </div>
   );

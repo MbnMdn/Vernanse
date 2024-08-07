@@ -2,7 +2,7 @@ import React from 'react';
 
 import Table from '../Table';
 
-export default function ContractTable() {
+export default function CustomerContractsTable() {
   const columns = [
     { header: 'Project Name', accessor: 'projectName' },
     { header: 'Provider', accessor: 'provider' },

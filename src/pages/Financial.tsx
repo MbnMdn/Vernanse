@@ -1,6 +1,7 @@
 import { DatePicker, type DatePickerProps, Radio, type RadioChangeEvent } from 'antd';
 import React, { useState } from 'react';
 
+import AdminFinancialSection from '../components/Admin Panel/Financial/AdminFinancialSection';
 import CustomerFinancialTable from '../components/Financial/Customer/CustomerFinancialTable';
 import EmployeeFinancialTable from '../components/Financial/Employee/EmployeeFinancialTable';
 
@@ -20,6 +21,7 @@ export default function Financial({ user_role }: { user_role: string }) {
       <div className="flex flex-col gap-8">
         {(user_role === 'designer' ||
           user_role === 'producer' ||
+          user_role === 'admin' ||
           user_role === 'installer') && (
           <>
             <div className="flex flex-col gap-3 md:flex-row md:gap-6">
@@ -50,6 +52,7 @@ export default function Financial({ user_role }: { user_role: string }) {
           </>
         )}
         {user_role === 'customer' && <CustomerFinancialTable />}
+        {/*{user_role === 'admin' && <AdminFinancialSection />}*/}
       </div>
     </div>
   );

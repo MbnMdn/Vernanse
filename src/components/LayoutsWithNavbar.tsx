@@ -10,7 +10,7 @@ export default function LayoutsWithNavbar({ user_role }: { user_role: string }) 
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
-      <div className="w-full flex-none md:mt-5 md:w-60">
+      <div className="scrollbar-hide mb-3 w-full flex-none overflow-y-auto md:mt-5 md:w-60">
         <MenuBarMobile setter={setShowSidebar} />
         <Sidebar
           show={showSidebar}
