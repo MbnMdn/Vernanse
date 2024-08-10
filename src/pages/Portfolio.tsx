@@ -1,5 +1,5 @@
-import AddNewSection from '../components/Portfolio/AddNewSection';
-import ProjectsSection from '../components/Portfolio/ProjectsSection';
+import AddNewSection from '../components/Portfolio/Designer - Installer/AddNewSection';
+import ProjectsSection from '../components/Portfolio/Designer - Installer/ProjectsSection';
 
 export default function Portfolio() {
   return (

@@ -14,8 +14,6 @@ import {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import DesignerDetails from './DesignerDetails';
-import MeasureDetails from './MeasureDetails';
 import ProducerDetails from './ProducerDetails';
 export default function OpenCardDetailsModalButton() {
   const [isModalOpen, setIsModalOpen] = useState(false);

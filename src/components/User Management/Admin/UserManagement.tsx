@@ -7,7 +7,9 @@ import {
 } from 'antd';
 import React, { useState } from 'react';
 
-import EmployeeFinancialTable from '../../Financial/Employee/EmployeeFinancialTable';
+import EmployeeFinancialTable from '../../Financial/Admin - Employee/EmployeeFinancialTable';
+import ListOfCustomers from './ListOfCustomers';
+import ListOfEmployees from './ListOfEmployees';
 
 export default function UserManagement({ user_role }: { user_role: string }) {
   const onChangeDate: DatePickerProps['onChange'] = (date, dateString) => {
@@ -18,20 +20,20 @@ export default function UserManagement({ user_role }: { user_role: string }) {
     console.log('search:', value);
   };
 
-  const [filterValue, setFilterValue] = useState('all');
+  const [userType, setUserType] = useState('customers');
 
   const onChange = (value: string) => {
     console.log(`selected ${value}`);
   };
 
   const filterValueChange = (e: RadioChangeEvent) => {
-    setFilterValue(e.target.value);
+    setUserType(e.target.value);
   };
   return (
     <div className="flex flex-col gap-5">
       {user_role === 'admin' && (
         <>
-          <div className="flex flex-col gap-3 md:flex-row md:gap-6">
+          <div className="flex flex-col gap-3 md:gap-6 lg:flex-row">
             <DatePicker
               onChange={onChangeDate}
               placeholder="Create Date"
@@ -46,27 +48,41 @@ export default function UserManagement({ user_role }: { user_role: string }) {
               optionFilterProp="label"
               onChange={onChange}
               onSearch={onSearch}
-              options={[
-                {
-                  value: 'active',
-                  label: 'Active',
-                },
-                {
-                  value: 'inactive',
-                  label: 'Inactive',
-                },
-                {
-                  value: 'overdue',
-                  label: 'Over Due',
-                },
-                {
-                  value: 'debtor',
-                  label: 'Debtor',
-                },
-              ]}
+              options={
+                userType === 'customers'
+                  ? [
+                      {
+                        value: 'active',
+                        label: 'Active',
+                      },
+                      {
+                        value: 'inactive',
+                        label: 'Inactive',
+                      },
+                      {
+                        value: 'debtor',
+                        label: 'Debtor',
+                      },
+                    ]
+                  : [
+                      {
+                        value: 'active',
+                        label: 'Active',
+                      },
+                      {
+                        value: 'inactive',
+                        label: 'Inactive',
+                      },
+                      {
+                        value: 'overdue',
+                        label: 'Over Due',
+                      },
+                    ]
+              }
             />
 
             <Select
+              disabled={userType === 'customers'}
               showSearch
               className="w-44"
               placeholder="Type"
@@ -93,13 +109,14 @@ export default function UserManagement({ user_role }: { user_role: string }) {
               ]}
             />
 
-            <Radio.Group value={filterValue} onChange={filterValueChange}>
-              <Radio.Button value="all">All</Radio.Button>
-              <Radio.Button value="custoemr">Customer</Radio.Button>
-              <Radio.Button value="serviceProvider">Service Provider</Radio.Button>
+            <Radio.Group value={userType} onChange={filterValueChange}>
+              <Radio.Button value="customers">Customers</Radio.Button>
+              <Radio.Button value="serviceProviders">Service Providers</Radio.Button>
             </Radio.Group>
           </div>
-          <EmployeeFinancialTable />
+
+          {userType === 'customers' && <ListOfCustomers />}
+          {userType === 'serviceProviders' && <ListOfEmployees />}
         </>
       )}
     </div>

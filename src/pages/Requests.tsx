@@ -4,7 +4,7 @@ import { DatePicker, Space } from 'antd';
 import { Radio } from 'antd';
 import React, { useState } from 'react';
 
-import RequestsTable from '../components/Requests/RequestsTable';
+import RequestsTable from '../components/Requests/Employee/RequestsTable';
 
 export default function Requests() {
   const onChange: DatePickerProps['onChange'] = (date, dateString) => {

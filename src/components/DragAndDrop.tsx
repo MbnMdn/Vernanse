@@ -120,7 +120,7 @@ interface DragAndDropProps {
   onUploadSuccess: (url: string) => void;
 }
 
-const DragAndDrop: React.FC<DragAndDropProps> = ({ onUploadSuccess }) => {
+export default function DragAndDrop() {
   const props: UploadProps = {
     beforeUpload: () => {
       return false;
@@ -136,7 +136,7 @@ const DragAndDrop: React.FC<DragAndDropProps> = ({ onUploadSuccess }) => {
       if (status === 'done') {
         message.success(`${info.file.name} file uploaded successfully.`);
         // Assuming the response contains the URL of the uploaded image
-        onUploadSuccess(response.url);
+        // onUploadSuccess(response.url);
       } else if (status === 'error') {
         message.error(`${info.file.name} file upload failed.`);
       }
@@ -163,6 +163,4 @@ const DragAndDrop: React.FC<DragAndDropProps> = ({ onUploadSuccess }) => {
       </Dragger>
     </ConfigProvider>
   );
-};
-
-export default DragAndDrop;
+}

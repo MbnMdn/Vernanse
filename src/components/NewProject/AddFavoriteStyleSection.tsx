@@ -1,6 +1,7 @@
 import { Empty, Typography } from 'antd';
 
 import DragAndDrop from '../DragAndDrop';
+import DraggablePoints from './Magnifier/DraggablePoints';
 
 export default function AddFavoriteStyleSection() {
   return (
@@ -9,7 +10,7 @@ export default function AddFavoriteStyleSection() {
         Didn’t find your favorite style? Add your favorite.{' '}
       </span>
       <div className="flex items-start gap-10">
-        <DragAndDrop />
+        <DraggablePoints />
         <Empty
           // image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
           image={Empty.PRESENTED_IMAGE_SIMPLE}

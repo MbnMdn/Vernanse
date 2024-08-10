@@ -923,30 +923,6 @@ export default function Sidebar({ show, setter, showSidebar, user_role }) {
       ),
     },
     {
-      key: '10',
-      label: (
-        <NavLink
-          to="/payment"
-          className={({ isActive }) =>
-            `my- mx-3 my-1 flex items-center  rounded-lg p-3 ${
-              isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
-            }`
-          }
-        >
-          {({ isActive }) => (
-            <div className="flex items-center gap-1">
-              <FinancialFilledIcon
-                isActive={isActive}
-                activeColor={tailwindColors.tertiary}
-                notActiveColor={tailwindColors.mainGreen}
-              />
-              <span>Payment</span>
-            </div>
-          )}
-        </NavLink>
-      ),
-    },
-    {
       key: '11',
       label: (
         <NavLink

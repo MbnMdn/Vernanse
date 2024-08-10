@@ -15,6 +15,13 @@ export default function Home({ user_role }: { user_role: string }) {
         </>
       )}
 
+      {user_role == 'admin' && (
+        <>
+          {/*<Chart />*/}
+          {/*<NewStylesSection />*/}
+        </>
+      )}
+
       {(user_role === 'designer' ||
         user_role === 'producer' ||
         user_role === 'installer') && (

@@ -1,15 +1,14 @@
 import React from 'react';
 
-import Table from '../Table';
+import Table from '../../Table';
 
-export default function EmployeeContractTable() {
+export default function AdminContractTable() {
   const columns = [
     { header: 'Project Name', accessor: 'projectName' },
     { header: 'Customer', accessor: 'customer' },
+    { header: 'Order Type', accessor: 'orderType' },
     { header: 'Price', accessor: 'price' },
-    { header: 'Service Type', accessor: 'serviceType' },
-    { header: 'Phone Number', accessor: 'phoneNumber' },
-    { header: 'Address', accessor: 'address' },
+    { header: 'Commission', accessor: 'commission' },
     { header: 'Sign Date', accessor: 'signDate' },
     { header: 'Dead Line', accessor: 'deadLine' },
     { header: 'Details', accessor: 'details' },
@@ -19,10 +18,9 @@ export default function EmployeeContractTable() {
     {
       projectName: 'John Brown',
       customer: 'Jordan',
-      price: '250$',
-      serviceType: 'Full Service',
-      phoneNumber: '+1325456789',
-      address: 'New York No. 1 Lake Park',
+      orderType: '250$',
+      price: 'Full Service',
+      commission: '+1325456789',
       signDate: '02/11/2024',
       deadLine: '21/12/2024',
       details: 'details',
@@ -30,10 +28,9 @@ export default function EmployeeContractTable() {
     {
       projectName: 'John Brown',
       customer: 'Jordan',
-      price: '250$',
-      serviceType: 'Full Service',
-      phoneNumber: '+1325456789',
-      address: 'New York No. 1 Lake Park',
+      orderType: '250$',
+      price: 'Full Service',
+      commission: '+1325456789',
       signDate: '02/11/2024',
       deadLine: '21/12/2024',
       details: 'details',
@@ -41,10 +38,9 @@ export default function EmployeeContractTable() {
     {
       projectName: 'John Brown',
       customer: 'Jordan',
-      price: '250$',
-      serviceType: 'Full Service',
-      phoneNumber: '+1325456789',
-      address: 'New York No. 1 Lake Park',
+      orderType: '250$',
+      price: 'Full Service',
+      commission: '+1325456789',
       signDate: '02/11/2024',
       deadLine: '21/12/2024',
       details: 'details',
@@ -52,10 +48,9 @@ export default function EmployeeContractTable() {
     {
       projectName: 'John Brown',
       customer: 'Jordan',
-      price: '250$',
-      serviceType: 'Full Service',
-      phoneNumber: '+1325456789',
-      address: 'New York No. 1 Lake Park',
+      orderType: '250$',
+      price: 'Full Service',
+      commission: '+1325456789',
       signDate: '02/11/2024',
       deadLine: '21/12/2024',
       details: 'details',
@@ -63,10 +58,9 @@ export default function EmployeeContractTable() {
     {
       projectName: 'John Brown',
       customer: 'Jordan',
-      price: '250$',
-      serviceType: 'Full Service',
-      phoneNumber: '+1325456789',
-      address: 'New York No. 1 Lake Park',
+      orderType: '250$',
+      price: 'Full Service',
+      commission: '+1325456789',
       signDate: '02/11/2024',
       deadLine: '21/12/2024',
       details: 'details',

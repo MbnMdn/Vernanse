@@ -1,5 +1,5 @@
-import StyleCard from '../Home/Customer/StyleCard';
-import ScrollableCards from '../ScrollableCards';
+import StyleCard from '../../Home/Customer/StyleCard';
+import ScrollableCards from '../../ScrollableCards';
 
 export default function ProjectsSection() {
   return (

@@ -1,6 +1,6 @@
 import { Empty, Typography } from 'antd';
 
-import DragAndDrop from '../DragAndDrop';
+import DragAndDrop from '../../DragAndDrop';
 
 export default function AddPortfolioPicture() {
   return (

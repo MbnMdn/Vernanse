@@ -1,0 +1,95 @@
+import React from 'react';
+
+import Table from '../../Table';
+
+export default function ListOfEmployees() {
+  const columns = [
+    { header: 'Full Name', accessor: 'fullName' },
+    { header: 'Username', accessor: 'username' },
+    { header: 'Phone Number', accessor: 'phoneNumber' },
+    { header: 'Create Date', accessor: 'createDate' },
+    { header: 'Status', accessor: 'status' },
+    { header: 'Type', accessor: 'type' },
+    { header: 'Projects', accessor: 'projects' },
+    { header: 'Debt', accessor: 'debt' },
+    { header: 'Total Transaction', accessor: 'totalTransaction' },
+    { header: 'Over Due Projects', accessor: 'overDueProjects' },
+    { header: 'Commission', accessor: 'commission' },
+    { header: 'Profile', accessor: 'profile' },
+  ];
+
+  const data = [
+    {
+      fullName: 'John Brown',
+      username: 'John Brown',
+      phoneNumber: '+1325456789',
+      createDate: '21/12/2024',
+      status: 'Active',
+      type: 'Designer',
+      projects: '5',
+      debt: '0 $',
+      totalTransaction: '1200$',
+      overDueProjects: '2',
+      commission: '125 $',
+      profile: 'open',
+    },
+    {
+      fullName: 'John Brown',
+      username: 'John Brown',
+      phoneNumber: '+1325456789',
+      createDate: '21/12/2024',
+      status: 'Active',
+      type: 'Designer',
+      projects: '5',
+      debt: '0 $',
+      totalTransaction: '1200$',
+      overDueProjects: '2',
+      commission: '125 $',
+      profile: 'open',
+    },
+    {
+      fullName: 'John Brown',
+      username: 'John Brown',
+      phoneNumber: '+1325456789',
+      createDate: '21/12/2024',
+      status: 'Active',
+      type: 'Designer',
+      projects: '5',
+      debt: '0 $',
+      totalTransaction: '1200$',
+      overDueProjects: '2',
+      commission: '125 $',
+      profile: 'open',
+    },
+    {
+      fullName: 'John Brown',
+      username: 'John Brown',
+      phoneNumber: '+1325456789',
+      createDate: '21/12/2024',
+      status: 'Active',
+      type: 'Designer',
+      projects: '5',
+      debt: '0 $',
+      totalTransaction: '1200$',
+      overDueProjects: '2',
+      commission: '125 $',
+      profile: 'open',
+    },
+    {
+      fullName: 'John Brown',
+      username: 'John Brown',
+      phoneNumber: '+1325456789',
+      createDate: '21/12/2024',
+      status: 'Active',
+      type: 'Designer',
+      projects: '5',
+      debt: '0 $',
+      totalTransaction: '1200$',
+      overDueProjects: '2',
+      commission: '125 $',
+      profile: 'open',
+    },
+  ];
+
+  return <Table columns={columns} data={data} />;
+}

@@ -3,7 +3,7 @@ import React from 'react';
 export default function Table({ columns, data }: { columns: any[]; data: any[] }) {
   return (
     <div className="overflow-x-auto">
-      <table className=" border-tools-table-outline w-full border-separate rounded-lg border text-left">
+      <table className=" border-tools-table-outline text-lef w-full  min-w-[1500px] border-separate rounded-lg border">
         <thead>
           <tr className="bg-mainGreen text-center text-tertiary">
             {columns.map((col, index) => (

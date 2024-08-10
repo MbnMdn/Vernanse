@@ -1,5 +1,5 @@
-import NewTicketSection from '../components/HelpAndSupport/NewTicketSection';
-import TicketsSection from '../components/HelpAndSupport/TicketsSection';
+import NewTicketSection from '../components/HelpAndSupport/Customer - Employee/NewTicketSection';
+import TicketsSection from '../components/HelpAndSupport/Customer - Employee/TicketsSection';
 
 export default function HelpAndSupport() {
   return (

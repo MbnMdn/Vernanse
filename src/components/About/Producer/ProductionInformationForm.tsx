@@ -10,7 +10,7 @@ import {
 } from 'antd';
 import React, { useState } from 'react';
 
-import DragAndDrop from '../DragAndDrop';
+import DragAndDrop from '../../DragAndDrop';
 
 const onChange: DatePickerProps['onChange'] = (date, dateString) => {
   console.log(date, dateString);

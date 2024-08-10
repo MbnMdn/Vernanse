@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import SingleServiceCard from '../SingleServiceCard';
+import SingleServiceCard from './SingleServiceCard';
 
 export default function CustomerSingleService() {
   return (

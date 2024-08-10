@@ -1,22 +1,26 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import UserManagement from './components/Admin Panel/User Management/UserManagement';
+import UserManagement from './components/User Management/Admin/UserManagement';
 import LayoutsWithNavbar from './components/LayoutsWithNavbar';
 import DraggablePoints from './components/NewProject/Magnifier/DraggablePoints';
 import SelectPixels from './components/NewProject/Magnifier/SelectPixels';
+import UploadImg from './components/NewProject/Magnifier/UploadImg';
 import ProjectDetails from './components/Projects/ProjectDetails/ProjectDetails';
 import About from './pages/About';
 import Account from './pages/Account';
 import Auth from './pages/Auth';
 import Contract from './pages/Contract';
+import CustomreService from './pages/CustomreService';
 import Design from './pages/Design';
+import DesignStyles from './pages/DesignStyles';
 import Financial from './pages/Financial';
 import HelpAndSupport from './pages/HelpAndSupport';
 import Home from './pages/Home';
 import Install from './pages/Install';
 import Measure from './pages/Measure';
 import NewProject from './pages/NewProject';
+import Offers from './pages/Offers';
 import PageNotFound from './pages/PageNotFound';
 import PayOutPreferences from './pages/PayOutPreferences';
 import Portfolio from './pages/Portfolio';
@@ -35,7 +39,7 @@ export default function App() {
     admin: 'admin',
   };
 
-  const user_role = roles.admin;
+  const user_role = roles.installer;
 
   return (
     <>
@@ -46,7 +50,7 @@ export default function App() {
               <Route path="/" element={<LayoutsWithNavbar user_role={user_role} />}>
                 <Route path="/" element={<Home user_role={user_role} />} />
                 <Route path="/new-project" element={<NewProject />} />
-                <Route path="/projects" element={<Projects />} />
+                <Route path="/projects" element={<Projects user_role={user_role} />} />
                 <Route
                   path="/projects/:id"
                   element={<ProjectDetails user_role={user_role} />}
@@ -75,8 +79,12 @@ export default function App() {
                   path="/price-and-material"
                   element={<PriceAndMaterial user_role={user_role} />}
                 />
+                <Route path="/customer-service" element={<CustomreService />} />
+                <Route path="/offers" element={<Offers />} />
+                <Route path="/design-styles" element={<DesignStyles />} />
 
                 <Route path="/test" element={<DraggablePoints />} />
+                <Route path="/test2" element={<UploadImg />} />
               </Route>
               <Route path="auth" element={<Auth />} />
               <Route path="*" element={<PageNotFound />} />

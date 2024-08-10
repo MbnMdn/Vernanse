@@ -1,7 +1,7 @@
 import { Select } from 'antd';
 import React from 'react';
 
-import EmployeeFinancialTable from '../../Financial/Employee/EmployeeFinancialTable';
+import EmployeeFinancialTable from '../../Financial/Admin - Employee/EmployeeFinancialTable';
 import SearchBar from '../../SearchBar';
 
 export default function PriceAndMaterialSection({ user_role }: { user_role: string }) {

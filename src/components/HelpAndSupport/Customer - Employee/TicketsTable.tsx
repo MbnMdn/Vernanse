@@ -1,5 +1,6 @@
 import React from 'react';
-import Table from '../Table';
+
+import Table from '../../Table';
 
 export default function TicketsTable() {
   const columns = [
@@ -9,7 +10,7 @@ export default function TicketsTable() {
     { header: 'Subject', accessor: 'subject' },
     { header: 'Description', accessor: 'description' },
     { header: 'Status', accessor: 'status' },
-    { header: 'Details', accessor: 'details' }
+    { header: 'Details', accessor: 'details' },
   ];
 
   const data = [
@@ -20,7 +21,7 @@ export default function TicketsTable() {
       subject: 'Jordan',
       description: 'Need to design kitchen ...',
       status: 'Answered',
-      details: 'Answered'
+      details: 'Answered',
     },
     {
       ticketNumber: '#212533',
@@ -29,7 +30,7 @@ export default function TicketsTable() {
       subject: 'AB',
       description: 'Need to design kitchen ...',
       status: 'Answered',
-      details: 'Answered'
+      details: 'Answered',
     },
     {
       ticketNumber: '#212533',
@@ -38,7 +39,7 @@ export default function TicketsTable() {
       subject: 'Monda',
       description: 'Need to design kitchen ...',
       status: 'Answered',
-      details: 'Pending'
+      details: 'Pending',
     },
     {
       ticketNumber: '#212533',
@@ -47,8 +48,8 @@ export default function TicketsTable() {
       subject: 'AM',
       description: 'Need to design kitchen ...',
       status: 'Answered',
-      details: 'Pending'
-    }
+      details: 'Pending',
+    },
   ];
 
   return (
