@@ -8,6 +8,12 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import bath from '../../assets/bath.jpg';
+import pic2 from '../../assets/pic2.jpg';
+import pic3 from '../../assets/pic3.jpg';
+import pic4 from '../../assets/pic4.jpg';
+import pic5 from '../../assets/pic5.jpg';
+import pic7 from '../../assets/pic7.jpg';
+import pic8 from '../../assets/pic8.jpg';
 export default function App() {
   return (
     <>
@@ -19,7 +25,7 @@ export default function App() {
         spaceBetween={5}
         centeredSlides={true}
         autoplay={{
-          delay: 4000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -33,19 +39,22 @@ export default function App() {
           <img src={bath} alt="bath" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bath} alt="bath" />
+          <img src={pic2} alt="bath" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bath} alt="bath" />
+          <img src={pic3} alt="bath" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bath} alt="bath" />
+          <img src={pic4} alt="bath" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={bath} alt="bath" />
-        </SwiperSlide>{' '}
+          <img src={pic5} alt="bath" />
+        </SwiperSlide>
         <SwiperSlide>
-          <img src={bath} alt="bath" />
+          <img src={pic7} alt="bath" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={pic8} alt="bath" />
         </SwiperSlide>
       </Swiper>
     </>

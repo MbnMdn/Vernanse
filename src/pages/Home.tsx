@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Chart from '../components/Home/Admin/Chart';
 import NewStylesSection from '../components/Home/Customer/NewStylesSection';
 import SpecialOffersSection from '../components/Home/Customer/SpecialOffersSection';
 import OverviewSection from '../components/Home/Employee/OverviewSection';
@@ -15,12 +16,7 @@ export default function Home({ user_role }: { user_role: string }) {
         </>
       )}
 
-      {user_role == 'admin' && (
-        <>
-          {/*<Chart />*/}
-          {/*<NewStylesSection />*/}
-        </>
-      )}
+      {user_role == 'admin' && <Chart />}
 
       {(user_role === 'designer' ||
         user_role === 'producer' ||

@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client';
 
 import tailwindColors from '../tailwindColors';
 import App from './App';
+import { AuthProvider } from './Context/AuthProvider';
 
 const rootElement = document.getElementById('root');
 
@@ -16,14 +17,16 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: tailwindColors.secondary,
-        },
-      }}
-    >
-      <App />
-    </ConfigProvider>
+    <AuthProvider>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: tailwindColors.secondary,
+          },
+        }}
+      >
+        <App />
+      </ConfigProvider>
+    </AuthProvider>
   </StrictMode>,
 );

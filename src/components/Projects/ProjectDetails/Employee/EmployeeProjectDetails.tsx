@@ -10,7 +10,7 @@ export default function EmployeeProjectDetails({ user_role }: { user_role: strin
   // <div>Project {id}</div>
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-5">
       <EmployeeProjectInfoSection user_role={user_role} />
       {user_role === 'designer' && <SelectedStyleSection />}
       {(user_role === 'producer' || user_role === 'installer') && (

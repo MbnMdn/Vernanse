@@ -1,61 +1,104 @@
-import { Button, Form, Input } from 'antd';
-import React from 'react';
+import { Button, Input } from 'antd';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
-const layout = {
-  labelCol: { span: 8 },
-  wrapperCol: { span: 16 },
-};
-
-const validateMessages = {
-  required: '${label} is required!',
-  types: {
-    email: 'Please enter a valid email!',
-  },
-};
-
-const onFinish = (values: never) => {
-  console.log(values);
-};
+import AuthContext from '../../Context/AuthProvider';
+// import axios from '../../scripts/api/axios';
+const LOGIN_URL = '/auth';
 
 export default function SignInForm() {
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    throw new Error('useContext must be used within an AuthProvider');
+  }
+
+  const { setAuth } = context;
+  const userRef = useRef(null);
+  const errRef = useRef(null);
+
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
+  // const handleSubmit = async (e: { preventDefault: () => void }) => {
+  //   e.preventDefault();
+  //
+  //   try {
+  //     const response = await axios.post(
+  //       LOGIN_URL,
+  //       JSON.stringify({ username, password }),
+  //     );
+  //     setUsername('');
+  //     setPassword('');
+  //     console.log(JSON.stringify(response?.data));
+  //     const accessToken = response?.data?.access_token;
+  //     const roles = response?.data?.roles;
+  //     setAuth({ username, password, accessToken, roles });
+  //   } catch (error) {
+  //     // if(!error?.response){
+  //     //   setError('No Response')
+  //     //
+  //     // }
+  //     console.log(error);
+  //   }
+  //
+  //   console.log(username, password);
+  // };
+
+  // useEffect(() => {
+  //   userRef.current?.focus();
+  // }, []);
+
+  useEffect(() => {
+    setError('');
+  }, [username, password]);
+
   return (
     <div className="mt-4 flex w-full flex-col items-center">
-      <Form
-        {...layout}
-        name="nest-messages"
-        onFinish={onFinish}
-        className="w-full"
-        validateMessages={validateMessages}
-      >
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col">
-            <Form.Item name={['email']} rules={[{ required: true, type: 'email' }]}>
-              <Input
-                size={'large'}
-                placeholder="Email"
-                className="w-72 md:w-72 lg:w-80"
-              />
-            </Form.Item>
-            <Form.Item name={['password']} rules={[{ required: true }]}>
-              <Input.Password
-                size={'large'}
-                placeholder="Password"
-                className="w-72 md:w-72 lg:w-80"
-              />
-            </Form.Item>
-          </div>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>
-            <Button
+      <p ref={errRef} aria-live="assertive">
+        {error}
+      </p>
+      <form name="nest-messages"
+            // onSubmit={handleSubmit}
+            className="w-full">
+        <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col gap-5">
+            {/*<Form.Item name={['email']} rules={[{ required: true, type: 'email' }]}>*/}
+            <Input
+              required
+              type="email"
+              ref={userRef}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               size={'large'}
+              placeholder="Email"
               className="w-72 md:w-72 lg:w-80"
-              type="primary"
-              htmlType="submit"
-            >
-              Sign In
-            </Button>
-          </Form.Item>
+            />
+            {/*</Form.Item>*/}
+            {/*<Form.Item name={['password']} rules={[{ required: true }]}>*/}
+            <Input.Password
+              autoComplete="on"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              size={'large'}
+              placeholder="Password"
+              className="w-72 md:w-72 lg:w-80"
+            />
+            {/*</Form.Item>*/}
+          </div>
+          {/*<Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>*/}
+          <Button
+            size={'large'}
+            className="w-72 md:w-72 lg:w-80"
+            type="primary"
+            htmlType="submit"
+          >
+            Sign In
+          </Button>
+          {/*</Form.Item>*/}
         </div>
-      </Form>
+      </form>
       <div className="my-4 flex w-10/12 items-center">
         <hr className="flex-grow border-t border-gray-300" />
         <span className="px-3 text-gray-500">OR</span>

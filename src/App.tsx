@@ -1,12 +1,13 @@
 import { Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import UserManagement from './components/User Management/Admin/UserManagement';
 import LayoutsWithNavbar from './components/LayoutsWithNavbar';
 import DraggablePoints from './components/NewProject/Magnifier/DraggablePoints';
+import SelectLine from './components/NewProject/Magnifier/SelectLine';
 import SelectPixels from './components/NewProject/Magnifier/SelectPixels';
 import UploadImg from './components/NewProject/Magnifier/UploadImg';
 import ProjectDetails from './components/Projects/ProjectDetails/ProjectDetails';
+import UserManagement from './components/User Management/Admin/UserManagement';
 import About from './pages/About';
 import Account from './pages/Account';
 import Auth from './pages/Auth';
@@ -39,7 +40,7 @@ export default function App() {
     admin: 'admin',
   };
 
-  const user_role = roles.installer;
+  const user_role = roles.admin;
 
   return (
     <>
@@ -85,6 +86,7 @@ export default function App() {
 
                 <Route path="/test" element={<DraggablePoints />} />
                 <Route path="/test2" element={<UploadImg />} />
+                <Route path="/test3" element={<SelectLine />} />
               </Route>
               <Route path="auth" element={<Auth />} />
               <Route path="*" element={<PageNotFound />} />

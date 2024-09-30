@@ -21,7 +21,7 @@ export default function AuthTabs() {
   ];
 
   return (
-    <div className=" flex h-full flex-col justify-center rounded-2xl border-4 border-mainGreen border-double md:border-none">
+    <div className=" flex h-full flex-col justify-center rounded-2xl border-4 border-double border-mainGreen md:border-none">
       <ConfigProvider
         theme={{
           components: {
