@@ -45,7 +45,7 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<div className="container">Loading...</div>}>
-        <HashRouter>
+        <BrowserRouter>
           <div className="bg-mainGreen">
             <Routes>
               <Route path="/" element={<LayoutsWithNavbar user_role={user_role} />}>
@@ -93,7 +93,7 @@ export default function App() {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
-        </HashRouter>
+        </BrowserRouter>
       </Suspense>
     </>
   );
