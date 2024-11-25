@@ -22,7 +22,7 @@ export default function NavLinks() {
       <ul className="flex flex-col gap-3">
         <li>
           <NavLink
-            to="/"
+            to="/home"
             style={({ isActive }) => {
               return {
                 color: isActive ? activeColor : '',
@@ -111,7 +111,7 @@ export default function NavLinks() {
           >
             <span className="flex">
               <FinancialIcon />
-              <FinancialFilledIcon color={tailwindColors.secondary} />
+              <FinancialFilledIcon />
               Financial
             </span>
           </NavLink>

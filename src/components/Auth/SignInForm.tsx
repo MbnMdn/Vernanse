@@ -1,5 +1,6 @@
 import { Button, Input } from 'antd';
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import AuthContext from '../../Context/AuthProvider';
 // import axios from '../../scripts/api/axios';
@@ -11,44 +12,15 @@ export default function SignInForm() {
   if (!context) {
     throw new Error('useContext must be used within an AuthProvider');
   }
+  const navigate = useNavigate();
 
   const { setAuth } = context;
   const userRef = useRef(null);
   const errRef = useRef(null);
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('example@gmail.com');
+  const [password, setPassword] = useState('12345');
   const [error, setError] = useState('');
-
-  // const handleSubmit = async (e: { preventDefault: () => void }) => {
-  //   e.preventDefault();
-  //
-  //   try {
-  //     const response = await axios.post(
-  //       LOGIN_URL,
-  //       JSON.stringify({ username, password }),
-  //     );
-  //     setUsername('');
-  //     setPassword('');
-  //     console.log(JSON.stringify(response?.data));
-  //     const accessToken = response?.data?.access_token;
-  //     const roles = response?.data?.roles;
-  //     setAuth({ username, password, accessToken, roles });
-  //   } catch (error) {
-  //     // if(!error?.response){
-  //     //   setError('No Response')
-  //     //
-  //     // }
-  //     console.log(error);
-  //   }
-  //
-  //   console.log(username, password);
-  // };
-
-  // useEffect(() => {
-  //   userRef.current?.focus();
-  // }, []);
-
   useEffect(() => {
     setError('');
   }, [username, password]);
@@ -58,12 +30,9 @@ export default function SignInForm() {
       <p ref={errRef} aria-live="assertive">
         {error}
       </p>
-      <form name="nest-messages"
-            // onSubmit={handleSubmit}
-            className="w-full">
+      <form name="nest-messages" className="w-full">
         <div className="flex flex-col items-center gap-5">
           <div className="flex flex-col gap-5">
-            {/*<Form.Item name={['email']} rules={[{ required: true, type: 'email' }]}>*/}
             <Input
               required
               type="email"
@@ -74,8 +43,6 @@ export default function SignInForm() {
               placeholder="Email"
               className="w-72 md:w-72 lg:w-80"
             />
-            {/*</Form.Item>*/}
-            {/*<Form.Item name={['password']} rules={[{ required: true }]}>*/}
             <Input.Password
               autoComplete="on"
               required
@@ -85,18 +52,16 @@ export default function SignInForm() {
               placeholder="Password"
               className="w-72 md:w-72 lg:w-80"
             />
-            {/*</Form.Item>*/}
           </div>
-          {/*<Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 0 }}>*/}
           <Button
             size={'large'}
             className="w-72 md:w-72 lg:w-80"
             type="primary"
             htmlType="submit"
+            onClick={() => navigate('/home')}
           >
             Sign In
           </Button>
-          {/*</Form.Item>*/}
         </div>
       </form>
       <div className="my-4 flex w-10/12 items-center">

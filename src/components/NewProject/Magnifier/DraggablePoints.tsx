@@ -1,4 +1,4 @@
-import { Button } from 'antd'; // Make sure to import your image
+import { Button } from 'antd';
 import React, { useRef, useState } from 'react';
 
 import drag from '../../../assets/drag.png';

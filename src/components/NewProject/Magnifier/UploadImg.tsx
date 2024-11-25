@@ -1,36 +1,3 @@
-//
-// import React, { useState } from 'react';
-//
-// const App: React.FC = () => {
-//   const [selectedImage, setSelectedImage] = useState<string | ArrayBuffer | null>(null);
-//
-//   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     const file = event.target.files?.[0];
-//     if (file) {
-//       const reader = new FileReader();
-//       reader.onloadend = () => {
-//         setSelectedImage(reader.result);
-//       };
-//       reader.readAsDataURL(file);
-//     }
-//   };
-//
-//   return (
-//     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
-//       <h1 className="mb-4 text-3xl font-bold">Photo Uploader</h1>
-//       <input type="file" accept="image/*" onChange={handleImageUpload} className="mb-4" />
-//       {selectedImage && (
-//         <img
-//           src={selectedImage as string}
-//           alt="Selected"
-//           className="h-auto max-w-full rounded-lg shadow-md"
-//         />
-//       )}
-//     </div>
-//   );
-// };
-// export default App;
-
 import { Button } from 'antd';
 import React, { useRef, useState } from 'react';
 
@@ -130,16 +97,24 @@ const UploadImg: React.FC = () => {
           body: formData,
         });
 
-        const data = await result.json()
+        const data = await result.json();
 
         console.log(data);
 
-        if(data.status === 'ERROR'){
-          alert(data.result)
-          return
+        if (data.status === 'ERROR') {
+          alert(data.result);
+          return;
         }
 
-        alert('Width: ' + data.result[2].toFixed(2) + 'cm' + '\n' + 'Height: ' + data.result[3].toFixed(2) + 'cm');
+        alert(
+          'Width: ' +
+            data.result[2].toFixed(2) +
+            'cm' +
+            '\n' +
+            'Height: ' +
+            data.result[3].toFixed(2) +
+            'cm',
+        );
       } catch (error) {
         console.log(error);
       }

@@ -71,7 +71,7 @@ export default function UploadIndexStep() {
   return (
     <div className="flex flex-col items-center gap-5">
       <p>Upload the Index Photo</p>
-      <DragAndDrop onUploadSuccess={handleUploadSuccess} />
+      <DragAndDrop />
       {imageUrl && <img src={imageUrl} alt="Uploaded" className="mt-4 h-auto w-64" />}
       <Input
         className="w-64"

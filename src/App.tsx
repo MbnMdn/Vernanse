@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import LayoutsWithNavbar from './components/LayoutsWithNavbar';
 import DraggablePoints from './components/NewProject/Magnifier/DraggablePoints';
@@ -40,7 +40,7 @@ export default function App() {
     admin: 'admin',
   };
 
-  const user_role = roles.admin;
+  const user_role = roles.customer;
 
   return (
     <>
@@ -49,7 +49,8 @@ export default function App() {
           <div className="bg-mainGreen">
             <Routes>
               <Route path="/" element={<LayoutsWithNavbar user_role={user_role} />}>
-                <Route path="/" element={<Home user_role={user_role} />} />
+                <Route path="/" element={<Navigate to="/auth" />} />
+                <Route path="/home" element={<Home user_role={user_role} />} />
                 <Route path="/new-project" element={<NewProject />} />
                 <Route path="/projects" element={<Projects user_role={user_role} />} />
                 <Route
@@ -88,6 +89,8 @@ export default function App() {
                 <Route path="/test2" element={<UploadImg />} />
                 <Route path="/test3" element={<SelectLine />} />
               </Route>
+
+
               <Route path="auth" element={<Auth />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>

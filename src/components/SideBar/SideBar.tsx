@@ -28,7 +28,7 @@ export default function Sidebar({ show, setter, showSidebar, user_role }) {
       key: '1',
       label: (
         <NavLink
-          to="/"
+          to="/home"
           className={({ isActive }) =>
             `mx-3 my-1.5 flex items-center  rounded-lg p-3 ${
               isActive ? ' bg-secondary text-tertiary' : 'bg-tertiary'
