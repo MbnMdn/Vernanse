@@ -1,9 +1,10 @@
 {
+  "homepage": "https://mbnmdn.github.io/Vernanse/",
   "name": "react-ts-tailwind-eslint-prettier",
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
