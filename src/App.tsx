@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import LayoutsWithNavbar from './components/LayoutsWithNavbar';
 import DraggablePoints from './components/NewProject/Magnifier/DraggablePoints';
@@ -45,7 +45,7 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<div className="container">Loading...</div>}>
-        <BrowserRouter>
+        <HashRouter>
           <div className="bg-mainGreen">
             <Routes>
               <Route path="/" element={<LayoutsWithNavbar user_role={user_role} />}>
@@ -89,13 +89,11 @@ export default function App() {
                 <Route path="/test2" element={<UploadImg />} />
                 <Route path="/test3" element={<SelectLine />} />
               </Route>
-
-
               <Route path="auth" element={<Auth />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </Suspense>
     </>
   );
